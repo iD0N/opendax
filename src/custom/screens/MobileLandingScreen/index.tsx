@@ -148,8 +148,8 @@ class Landing extends React.Component<Props, State> {
             <div className="pg-moblanding-screen__market-info">
                 <div className="pg-moblanding-screen__market-info__wrap">
                     <div className="pg-moblanding-screen__market-info__wrap__title">
-                        <h1>{this.translate('page.body.landing.marketInfo.title.text1')}</h1>
-                        <h2>{this.translate('page.body.landing.marketInfo.title.text2')}</h2>
+                        <h1 style={{fontSize: "40px", lineHeight: "40px" }}>{this.translate('page.body.landing.marketInfo.title.text1')}</h1>
+                        <h2 className="pg-moblanding-screen-h2">{this.translate('page.body.landing.marketInfo.title.text2')}</h2>
                         <Link to="/signup" className="landing-button">
                             {this.translate('page.body.landing.marketInfo.title.button')}
                         </Link>
