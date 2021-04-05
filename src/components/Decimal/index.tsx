@@ -94,7 +94,7 @@ class Decimal extends React.Component<DecimalProps> {
             result += '0';
         }
 
-        result = formatWithSeparators(result, thousSep, floatSep);
+        result = formatWithSeparators(result, "", ".");
 
         return result;
     }

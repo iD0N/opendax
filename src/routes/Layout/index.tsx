@@ -10,6 +10,7 @@ import { minutesUntilAutoLogout, sessionCheckInterval, showLanding } from '../..
 import { ExpiredSessionModal } from '../../components';
 import { WalletsFetch } from '../../containers';
 import { LandingScreen } from '../../custom/screens';
+import { MobileLandingScreen } from '../../custom/screens';
 import { toggleColorTheme } from '../../helpers';
 import {
     ChangeForgottenPasswordMobileScreen,
@@ -329,7 +330,7 @@ class LayoutComponent extends React.Component<LayoutProps, LayoutState> {
                         <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile/theme" component={ProfileThemeMobileScreen} />
                         <PrivateRoute loading={userLoading} isLogged={isLoggedIn} path="/profile" component={ProfileMobileScreen} />
                         <Route exact={true} path="/trading/:market?" component={TradingScreenMobile} />
-                        {showLanding() && <Route exact={true} path="/" component={LandingScreen} />}
+                        {showLanding() && <Route exact={true} path="/" component={MobileLandingScreen} />}
                         <Route path="**"><Redirect to="/trading/" /></Route>
                     </Switch>
                     {isLoggedIn && <WalletsFetch />}
