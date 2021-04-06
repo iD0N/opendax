@@ -32,11 +32,11 @@ export const en = {
     'page.body.trade.header.newOrder.content.tabs.sell': 'Vendi',
     'page.body.trade.header.newOrder.content.orderType': 'Tipo ordine',
     'page.body.trade.header.newOrder.content.orderType.limit': 'Limite',
-    'page.body.trade.header.newOrder.content.orderType.market': 'Mercati',
+    'page.body.trade.header.newOrder.content.orderType.market': 'Mercato',
     'page.body.trade.header.newOrder.content.price': 'Prezzo',
-    'page.body.trade.header.newOrder.content.amount': 'Amount',
-    'page.body.trade.header.newOrder.content.total': 'Total',
-    'page.body.trade.header.newOrder.content.available': 'Available',
+    'page.body.trade.header.newOrder.content.amount': 'Quantità',
+    'page.body.trade.header.newOrder.content.total': 'Totale',
+    'page.body.trade.header.newOrder.content.available': 'Disponibilità',
     'page.body.trade.header.newOrder.content.filterPrice': 'Valid price step is {priceStep}',
 
     'error.order.create.minAmount': 'Amount is too low. Minimum amount is {amount} {currency}',
@@ -44,9 +44,9 @@ export const en = {
     'error.order.create.maxPrice': 'Price is too high. Maximum price is {price} {currency}',
     'error.order.create.available': 'Balance exceeded. Available {available} {currency}',
 
-    'page.body.trade.header.marketDepths': 'Market Depth',
+    'page.body.trade.header.marketDepths': 'Profondità mercati',
     'page.body.trade.header.marketDepths.content.price': 'Prezzo:',
-    'page.body.trade.header.marketDepths.content.volume': 'Amount:',
+    'page.body.trade.header.marketDepths.content.volume': 'Quantità:',
     'page.body.trade.header.marketDepths.content.cumulativeVolume': 'Total:',
     'page.body.trade.header.marketDepths.content.cumulativeValue': 'Valore Stimato:',
 
@@ -55,15 +55,15 @@ export const en = {
     'page.body.trade.toolBar.selectMarket': 'Seleziona Mercato',
     'page.body.trade.toolBar.highest': 'Massimo 24h',
     'page.body.trade.toolBar.volume': 'Volume 24h',
-    'page.body.trade.toolBar.change': 'Change',
+    'page.body.trade.toolBar.change': 'Variazione',
 
     'page.body.trade.header.asks': 'Asks',
     'page.body.trade.header.bids': 'Bids',
-    'page.body.trade.orderbook': 'Order Book',
-    'page.body.trade.orderbook.lastMarket': 'Last Market Price',
-    'page.body.trade.orderbook.header.price': 'Price',
-    'page.body.trade.orderbook.header.amount': 'Amount',
-    'page.body.trade.orderbook.header.volume': 'Total',
+    'page.body.trade.orderbook': 'Libro Ordini',
+    'page.body.trade.orderbook.lastMarket': 'Ultimo Prezzo',
+    'page.body.trade.orderbook.header.price': 'Prezzo',
+    'page.body.trade.orderbook.header.amount': 'Quantità',
+    'page.body.trade.orderbook.header.volume': 'Totale',
 
     'page.body.trade.header.recentTrades': 'Recent Trades',
     'page.body.trade.header.recentTrades.content.time': 'Time',
@@ -79,8 +79,8 @@ export const en = {
     'page.body.trade.header.openOrders.content.filled': 'Filled',
 
     /* Charts */
-    'page.body.charts.tabs.chart': 'Chart',
-    'page.body.charts.tabs.depth': 'Depth',
+    'page.body.charts.tabs.chart': 'Grafico',
+    'page.body.charts.tabs.depth': 'Profondità',
 
     /* Markets Table */
     'page.body.marketsTable.filter.all': 'Tutti',
@@ -101,8 +101,8 @@ export const en = {
     'page.body.landing.marketInfo.title.text2': 'Buy, sell and trade digital currency.',
     'page.body.landing.marketInfo.title.button': 'start trading',
 
-    'page.body.landing.platformInfo.item.first.value': '30M+',
-    'page.body.landing.platformInfo.item.first.title': 'Customers served',
+    'page.body.landing.platformInfo.item.first.value': '1000 miliardi',
+    'page.body.landing.platformInfo.item.first.title': 'La capitalizzazione del Bitcoin',
     'page.body.landing.platformInfo.item.second.value': '$3M+',
     'page.body.landing.platformInfo.item.second.title': '30 days volume',
     'page.body.landing.platformInfo.item.third.value': '101',

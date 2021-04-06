@@ -240,19 +240,15 @@ class Landing extends React.Component<Props, State> {
                         </div>
                         <div className="pg-landing-screen__simple-exchange__wrap__content__text-row">
                             <img src={CheckIcon} alt="CheckIcon" />
-                            <span>{this.translate('page.body.landing.simpleExchange.content.text1')}</span>
+                            <span>{this.translate('page.body.landing.simpleExchange.content.text2')}</span>
                         </div>
                         <div className="pg-landing-screen__simple-exchange__wrap__content__text-row">
                             <img src={CheckIcon} alt="CheckIcon" />
-                            <span>{this.translate('page.body.landing.simpleExchange.content.text1')}</span>
+                            <span>{this.translate('page.body.landing.simpleExchange.content.text3')}</span>
                         </div>
                         <div className="pg-landing-screen__simple-exchange__wrap__content__text-row">
                             <img src={CheckIcon} alt="CheckIcon" />
-                            <span>{this.translate('page.body.landing.simpleExchange.content.text1')}</span>
-                        </div>
-                        <div className="pg-landing-screen__simple-exchange__wrap__content__text-row">
-                            <img src={CheckIcon} alt="CheckIcon" />
-                            <span>{this.translate('page.body.landing.simpleExchange.content.text1')}</span>
+                            <span>{this.translate('page.body.landing.simpleExchange.content.text4')}</span>
                         </div>
                     </div>
                     <img
