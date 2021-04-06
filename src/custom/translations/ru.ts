@@ -154,6 +154,10 @@ export const ru: LangType = {
 
     'page.body.landing.simpleExchange.content.title': 'Buy & Sell crypto in a easy way',
     'page.body.landing.simpleExchange.content.text1': 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod ',
+	'page.body.landing.simpleExchange.content.text2': 'Sicurezza: Crypto Smart garantisce i più elevati parametri di protezione dei dati personalie delle transazioni. I tuoi soldi sono al sicuro',
+	'page.body.landing.simpleExchange.content.text3': 'Indipendenza: Crypto Smart è una società totalmente indipendente. Non è legata a nessun grande gruppo bancario o finanziario. No conflitti di interesse',
+	'page.body.landing.simpleExchange.content.text4': 'Autonomia: il cliente gestisce da solo il suo portafoglio. Senza nessun intermediario. Quando vuole, tutti i giorni, 24 ore al giorno',
+	'page.body.landing.simpleExchange.content.text5': ' ',
 
     'page.body.landing.news.title': 'Last news',
     'page.body.landing.news.card1.title': 'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
