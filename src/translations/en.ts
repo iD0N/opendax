@@ -140,23 +140,23 @@ export const en = {
     'page.body.landing.footer.wallets': 'Wallets',
     'page.body.landing.footer.fees': 'Fees',
     'page.body.landing.footer.faq': 'FAQ',
-    'page.body.landing.footer.support': 'Support',
+    'page.body.landing.footer.support': 'Supporto',
     'page.body.landing.footer.privacy': 'Privacy',
     'page.body.landing.footer.about': 'About us',
     'page.body.landing.footer.community': 'Community',
     'page.body.landing.footer.info': 'Info',
-    'page.body.landing.footer.rights': 'Baseapp © All rights reserved.',
+    'page.body.landing.footer.rights': 'Cryptosmart © All rights reserved.',
 
     'pagy.body.footer.powered_by': 'Powered by',
 
 
     /* Wallets */
-    'page.body.wallets.estimated_value': 'Estimated Value',
+    'page.body.wallets.estimated_value': 'Valore stimato',
 
     'page.body.wallets.locked': 'Locked',
     'page.body.wallets.balance': 'Balance',
-    'page.body.wallets.tabs.deposit': 'Deposit',
-    'page.body.wallets.tabs.deposit.disabled.message': 'Deposit was disabled by administration',
+    'page.body.wallets.tabs.deposit': 'Depositi',
+    'page.body.wallets.tabs.deposit.disabled.message': 'I depositi sono stati disabilitati da Crypto Smart',
     'page.body.wallets.tabs.deposit.ccy.message.submit': 'Submit a deposit using the following address or QR code. Your deposit will be reflected in your account after {confirmations} confirmations',
     'page.body.wallets.tabs.deposit.ccy.message.address': 'Deposit Address',
     'page.body.wallets.tabs.deposit.ccy.message.button': 'COPY',
