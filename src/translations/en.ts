@@ -133,7 +133,7 @@ export const en = {
     'page.body.landing.tradeOnTheGo.item.button': 'let’s try',
 
     'page.body.landing.startTrading.title': 'Inizia subito qui',
-    'page.body.landing.startTrading.button1': 'registrati',
+    'page.body.landing.startTrading.button1': 'Registrati',
     'page.body.landing.startTrading.button2': 'Inizia qui',
 
     'page.body.landing.footer.exchange': 'Exchange',
@@ -156,12 +156,12 @@ export const en = {
     'page.body.wallets.locked': 'Locked',
     'page.body.wallets.balance': 'Balance',
     'page.body.wallets.tabs.deposit': 'Depositi',
-    'page.body.wallets.tabs.deposit.disabled.message': 'I depositi sono stati disabilitati da Crypto Smart',
-    'page.body.wallets.tabs.deposit.ccy.message.submit': 'Submit a deposit using the following address or QR code. Your deposit will be reflected in your account after {confirmations} confirmations',
-    'page.body.wallets.tabs.deposit.ccy.message.address': 'Deposit Address',
-    'page.body.wallets.tabs.deposit.ccy.message.button': 'COPY',
-    'page.body.wallets.tabs.deposit.ccy.message.success': 'Address copied',
-    'page.body.wallets.tabs.deposit.ccy.message.pending': 'Generating deposit address',
+    'page.body.wallets.tabs.deposit.disabled.message': 'I depositi sono disabilitati',
+    'page.body.wallets.tabs.deposit.ccy.message.submit': 'Invia un deposito utilizzando il seguente indirizzo or QR code. Il deposito verrà accreditato dopo {confirmations} confirmations',
+    'page.body.wallets.tabs.deposit.ccy.message.address': 'Indirizzo conto',
+    'page.body.wallets.tabs.deposit.ccy.message.button': 'COPIA',
+    'page.body.wallets.tabs.deposit.ccy.message.success': 'Indirizzo copiato',
+    'page.body.wallets.tabs.deposit.ccy.message.pending': 'Stò generando lindirizzo',
     'page.body.wallets.tabs.deposit.ccy.button.generate': 'Generate',
     'page.body.wallets.tabs.deposit.ccy.button.address': 'address',
 
