@@ -13,10 +13,12 @@ export function* labelSaga(action: LabelFetch) {
         const payload = yield call(API.get(userOptions), '/resource/labels');
         let modpayload: { key: string, value: string, scope: string, created_at: string, updated_at: string }[]=[] ;
         payload.map((data, key) => {
+            console.log("12345"+ JSON.stringify(data));
             //modifica del payload per far vedere  sulla pagina web il profilo come verificato
             if (data.key === 'profile' && data.value ==='pending') data.value = 'verified'; 
              modpayload.push(data);
         });
+        console.log("12345"+ JSON.stringify(modpayload));
         yield put(labelData(modpayload));
     } catch (error) {
         yield put(sendError({
