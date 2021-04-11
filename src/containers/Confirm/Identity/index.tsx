@@ -204,7 +204,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                         />
                     </fieldset>
                 </div>
-                <div className="pg-confirm__content-identity__forms__row">
+                <div className="pg-confirm__content-identity__forms__row input-group">
                     <fieldset className={dateOfBirthGroupClass}>
                         <div className="custom-input">
                             {dateOfBirth ? <label>{this.translate('page.body.kyc.identity.dateOfBirth')}</label> : null}
@@ -222,9 +222,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                             </div>
                         </div>
                     </fieldset>
-                </div>
-                <div className="pg-confirm__content-identity__forms__row">
-                    <div className="pg-confirm__content-identity__forms__row__content">
+                    <div className="pg-confirm__content-identity__forms__row__content ">
                         <SearchDropdown
                             className="pg-confirm__content-identity__forms__row__content-number-dropdown"
                             options={dataCountries}
@@ -233,7 +231,22 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                         />
                     </div>
                 </div>
-                <div className="pg-confirm__content-identity__forms__row input-group">
+                <fieldset className={fiscalcodeGroupClass}>
+                        <CustomInput
+                            label={this.translate('page.body.kyc.identity.fiscalcode')}
+                            defaultLabel={this.translate('page.body.kyc.identity.fiscalcode')}
+                            type="string"
+                            name="codicefiscale"
+                            autoComplete="codice fiscale"
+                            inputValue={fiscalcode}
+                            handleChangeInput={e => this.handleChange(e, 'fiscalcode')}
+                            onKeyPress={this.handleConfirmEnterPress}
+                            placeholder={this.translate('page.body.kyc.identity.fiscalcode')}
+                            handleFocusInput={this.handleFieldFocus('fiscalcode')}
+                        />
+                    </fieldset>
+                
+                
                     <fieldset className={residentialAddressGroupClass}>
                         <CustomInput
                             type="string"
@@ -247,7 +260,10 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                             handleFocusInput={this.handleFieldFocus('residentialAddress')}
                         />
                     </fieldset>
-                    <fieldset className={cityGroupClass}>
+                   
+                
+                <div className="pg-confirm__content-identity__forms__row input-group">
+                <fieldset className={cityGroupClass}>
                         <CustomInput
                             type="string"
                             name="ship-city"
@@ -260,8 +276,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                             handleFocusInput={this.handleFieldFocus('city')}
                         />
                     </fieldset>
-                </div>
-                <div className="pg-confirm__content-identity__forms__row input-group">
+                   
                     <fieldset className={postcodeGroupClass}>
                         <CustomInput
                             label={this.translate('page.body.kyc.identity.postcode')}
@@ -276,20 +291,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                             handleFocusInput={this.handleFieldFocus('postcode')}
                         />
                     </fieldset>
-                    <fieldset className={fiscalcodeGroupClass}>
-                        <CustomInput
-                            label={this.translate('page.body.kyc.identity.fiscalcode')}
-                            defaultLabel={this.translate('page.body.kyc.identity.fiscalcode')}
-                            type="string"
-                            name="ship-zip"
-                            autoComplete="shipping fiscalcode-code"
-                            inputValue={fiscalcode}
-                            handleChangeInput={e => this.handleChange(e, 'fiscalcode')}
-                            onKeyPress={this.handleConfirmEnterPress}
-                            placeholder={this.translate('page.body.kyc.identity.fiscalcode')}
-                            handleFocusInput={this.handleFieldFocus('fiscalcode')}
-                        />
-                    </fieldset>
+
                 </div>
               </div>
               {sendSuccess && !editSuccess && <p className="pg-confirm__success">{this.translate(sendSuccess)}</p>}
@@ -407,14 +409,15 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
 
                 return value.match(residentialAddressRegex) ? true : false;
             case 'city':
-                const cityRegex = new RegExp(`^[a-zA-Z]+$`);
+                const cityRegex = new RegExp(`^[a-zA-Z0-9-,.;/\\s]+$`);
 
                 return value.match(cityRegex) ? true : false;
             case 'postcode':
-            case 'fiscalcode':
-                const postcodeRegex = new RegExp(`^[a-zA-Z0-9]{1,12}$`);
-
+                const postcodeRegex = new RegExp(`^[0-9]{1,7}$`);
                 return value.match(postcodeRegex) ? true : false;
+            case 'fiscalcode':
+                const fiscalcodeRegex = new RegExp(`^[a-zA-Z0-9]{16,16}$`);
+                return value.match(fiscalcodeRegex) ? true : false;
             case 'dateOfBirth':
                 if (value.length === 10) {
                     return moment(value, 'DD/MM/YYYY').unix() < (Date.now() / 1000);
@@ -471,7 +474,16 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             city: this.state.city,
             country: this.state.countryOfBirth,
             confirm: true,
-            metadata: JSON.stringify({fiscalcode: this.state.fiscalcode}),
+            metadata: JSON.stringify({
+                fiscalcode: this.state.fiscalcode,
+                first_name: this.state.firstName,
+                last_name: this.state.lastName,
+                dob,
+                address: this.state.residentialAddress,
+                postcode: this.state.postcode,
+                city: this.state.city,
+                country: this.state.countryOfBirth
+            }),
         };
         const isIdentity = labels.length && labels.find(w => w.key === 'profile' && w.value === 'verified' && w.scope === 'private');
         const verifiedProfiles = user.profiles.length ? user.profiles.filter(i => i.state === 'verified') : [];

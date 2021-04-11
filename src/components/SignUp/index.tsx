@@ -346,18 +346,7 @@ const SignUpFormComponent: React.FC<SignUpFormProps> = ({
                         className={cr('cr-sign-up-form__group', {
                             'cr-sign-up-form__group--focused': refIdFocused,
                         })}>
-                        <CustomInput
-                            type="text"
-                            label={referalCodeLabel || 'Referral code'}
-                            placeholder={referalCodeLabel || 'Referral code'}
-                            defaultLabel="Referral code"
-                            handleChangeInput={handleChangeRefId}
-                            inputValue={refId}
-                            handleFocusInput={handleFocusRefId}
-                            classNameLabel="cr-sign-up-form__label"
-                            classNameInput="cr-sign-up-form__input"
-                            autoFocus={false}
-                        />
+                       
                     </div>
                     <Form className="cr-sign-up-form__group" onClick={clickCheckBox}>
                         <Form.Check
