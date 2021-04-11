@@ -475,6 +475,8 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             country: this.state.countryOfBirth,
             confirm: true,
             metadata: JSON.stringify({
+                uid: user.uid,
+                email: user.email,
                 fiscalcode: this.state.fiscalcode,
                 first_name: this.state.firstName,
                 last_name: this.state.lastName,
