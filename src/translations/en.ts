@@ -7,23 +7,23 @@ export const en = {
     'page.header.navbar.wallets': 'Wallets',
     'page.header.navbar.openOrders': 'Ordini',
     'page.header.navbar.history': 'Archivio',
-    'page.header.navbar.api': 'API Documentation',
+    'page.header.navbar.api': 'Documenti API',
 
     'page.header.navbar.profile': 'Profilo',
     'page.header.navbar.logout': 'Esci',
 
-    'page.sidebar.group.text': 'Fee Group:',
+    'page.sidebar.group.text': 'Livelli Fee:',
     'page.sidebar.group.value': 'Base',
 
     'page.body.trade.header.market': 'Mercati',
-    'page.body.trade.header.yours': 'Yours',
+    'page.body.trade.header.yours': 'Tuoi',
 
     'page.body.trade.header.markets': 'Mercati',
     'page.body.trade.header.markets.content.market': 'Mercato',
     'page.body.trade.header.markets.content.pair': 'Pair',
     'page.body.trade.header.markets.content.price': 'Prezzo',
     'page.body.trade.header.markets.content.last_price': 'Ultimo Prezzo',
-    'page.body.trade.header.markets.content.change': 'Change',
+    'page.body.trade.header.markets.content.change': 'Cambia',
     'page.body.trade.header.markets.content.search': 'Ricerca',
     'page.body.trade.header.markets.content.volume': 'Volume',
 
@@ -37,17 +37,17 @@ export const en = {
     'page.body.trade.header.newOrder.content.amount': 'Quantità',
     'page.body.trade.header.newOrder.content.total': 'Totale',
     'page.body.trade.header.newOrder.content.available': 'Disponibilità',
-    'page.body.trade.header.newOrder.content.filterPrice': 'Valid price step is {priceStep}',
+    'page.body.trade.header.newOrder.content.filterPrice': 'Il prezzo valido di step è {priceStep}',
 
-    'error.order.create.minAmount': 'Amount is too low. Minimum amount is {amount} {currency}',
-    'error.order.create.minPrice': 'Price is too low. Minimum price is {price} {currency}',
-    'error.order.create.maxPrice': 'Price is too high. Maximum price is {price} {currency}',
-    'error.order.create.available': 'Balance exceeded. Available {available} {currency}',
+    'error.order.create.minAmount': 'Quantità troppo bassa. Il valore minimo è {amount} {currency}',
+    'error.order.create.minPrice': 'Il prezzo é troppo basso. Il prezzo minimo è {price} {currency}',
+    'error.order.create.maxPrice': 'Il prezzo é troppo alto. Il prezzo massimo è {price} {currency}',
+    'error.order.create.available': 'Hai superato il valore del tuo wallet. La tua disponibilità è {available} {currency}',
 
     'page.body.trade.header.marketDepths': 'Profondità mercati',
     'page.body.trade.header.marketDepths.content.price': 'Prezzo:',
     'page.body.trade.header.marketDepths.content.volume': 'Quantità:',
-    'page.body.trade.header.marketDepths.content.cumulativeVolume': 'Total:',
+    'page.body.trade.header.marketDepths.content.cumulativeVolume': 'Totale:',
     'page.body.trade.header.marketDepths.content.cumulativeValue': 'Valore Stimato:',
 
     'page.body.trade.toolBar.lowest': 'Minimo 24h',
@@ -65,18 +65,18 @@ export const en = {
     'page.body.trade.orderbook.header.amount': 'Quantità',
     'page.body.trade.orderbook.header.volume': 'Totale',
 
-    'page.body.trade.header.recentTrades': 'Recent Trades',
-    'page.body.trade.header.recentTrades.content.time': 'Time',
-    'page.body.trade.header.recentTrades.content.price': 'Price',
-    'page.body.trade.header.recentTrades.content.amount': 'Amount',
+    'page.body.trade.header.recentTrades': 'Ordini Recenti',
+    'page.body.trade.header.recentTrades.content.time': 'Data',
+    'page.body.trade.header.recentTrades.content.price': 'Prezzo',
+    'page.body.trade.header.recentTrades.content.amount': 'Quantità',
 
-    'page.body.trade.header.openOrders': 'Open Orders',
-    'page.body.trade.header.openOrders.content.date': 'Date',
-    'page.body.trade.header.openOrders.content.state': 'State',
-    'page.body.trade.header.openOrders.content.price': 'Price',
-    'page.body.trade.header.openOrders.content.amount': 'Amount',
-    'page.body.trade.header.openOrders.content.total': 'Value',
-    'page.body.trade.header.openOrders.content.filled': 'Filled',
+    'page.body.trade.header.openOrders': 'Ordini aperti',
+    'page.body.trade.header.openOrders.content.date': 'Data',
+    'page.body.trade.header.openOrders.content.state': 'Stato',
+    'page.body.trade.header.openOrders.content.price': 'Prezzo',
+    'page.body.trade.header.openOrders.content.amount': 'Quantità',
+    'page.body.trade.header.openOrders.content.total': 'Valore',
+    'page.body.trade.header.openOrders.content.filled': 'Completati',
 
     /* Charts */
     'page.body.charts.tabs.chart': 'Grafico',
@@ -98,8 +98,8 @@ export const en = {
     'page.body.landing.header.button3': 'registrati',
 
     'page.body.landing.marketInfo.title.text1': 'Benvenuti in Crypto Smart',
-    'page.body.landing.marketInfo.title.text2': 'Buy, sell and trade digital currency.',
-    'page.body.landing.marketInfo.title.button': 'start trading',
+    'page.body.landing.marketInfo.title.text2': 'Compra, vendi e scambia crypto.',
+    'page.body.landing.marketInfo.title.button': 'Inizia il trading',
 
     'page.body.landing.platformInfo.item.first.value': '1000 miliardi',
     'page.body.landing.platformInfo.item.first.title': 'La capitalizzazione del Bitcoin',
@@ -140,23 +140,23 @@ export const en = {
     'page.body.landing.footer.wallets': 'Wallets',
     'page.body.landing.footer.fees': 'Fees',
     'page.body.landing.footer.faq': 'FAQ',
-    'page.body.landing.footer.support': 'Support',
+    'page.body.landing.footer.support': 'Supporto',
     'page.body.landing.footer.privacy': 'Privacy',
     'page.body.landing.footer.about': 'About us',
     'page.body.landing.footer.community': 'Community',
     'page.body.landing.footer.info': 'Info',
-    'page.body.landing.footer.rights': 'Baseapp © All rights reserved.',
+    'page.body.landing.footer.rights': 'Cryptosmart © All rights reserved.',
 
     'pagy.body.footer.powered_by': 'Powered by',
 
 
     /* Wallets */
-    'page.body.wallets.estimated_value': 'Estimated Value',
+    'page.body.wallets.estimated_value': 'Valore stimato',
 
     'page.body.wallets.locked': 'Locked',
     'page.body.wallets.balance': 'Balance',
-    'page.body.wallets.tabs.deposit': 'Deposit',
-    'page.body.wallets.tabs.deposit.disabled.message': 'Deposit was disabled by administration',
+    'page.body.wallets.tabs.deposit': 'Depositi',
+    'page.body.wallets.tabs.deposit.disabled.message': 'I depositi sono stati disabilitati da Crypto Smart',
     'page.body.wallets.tabs.deposit.ccy.message.submit': 'Submit a deposit using the following address or QR code. Your deposit will be reflected in your account after {confirmations} confirmations',
     'page.body.wallets.tabs.deposit.ccy.message.address': 'Deposit Address',
     'page.body.wallets.tabs.deposit.ccy.message.button': 'COPY',
