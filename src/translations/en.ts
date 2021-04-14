@@ -801,14 +801,14 @@ export const en = {
     'resource.labels.missing_value': 'Valore Mancante',
     'resource.labels.empty_value': 'Il Campo Valore è Vuoto',
 
-    'resource.documents.missing_doc_expire': 'Documents expiration date is missing',
-    'resource.documents.empty_doc_expire': 'Documents expiration date is missing or empty',
-    'resource.documents.expire_not_a_date' : 'Documents expiration is not a date',
-    'resource.documents.missing_doc_type': 'Documents type is missing',
-    'resource.documents.empty_doc_type': 'Documents type is missing or empty',
-    'resource.documents.missing_doc_number': 'Documents number is missing',
-    'resource.documents.empty_doc_number': 'Documents number is missing or empty',
-    'resource.documents.missing_upload': 'Attachment is missing',
+    'resource.documents.missing_doc_expire': 'Data Scadenza Documento Mancante',
+    'resource.documents.empty_doc_expire': 'Data Scadenza Documento è Vuoto',
+    'resource.documents.expire_not_a_date' : 'Scadenza Documento non è una Data',
+    'resource.documents.missing_doc_type': 'Tipo di Documento Mancante',
+    'resource.documents.empty_doc_type': 'Tipo di Documento è Vuoto',
+    'resource.documents.missing_doc_number': 'Numero di Documento Mancante',
+    'resource.documents.empty_doc_number': 'Numero di Documento è Vuoto',
+    'resource.documents.missing_upload': 'Allegato Mancante',
 
 
     'resource.user.missing_topic': 'Topic is missing',
