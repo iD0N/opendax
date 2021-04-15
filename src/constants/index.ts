@@ -19,8 +19,8 @@ export const pgRoutes = (isLoggedIn: boolean, isLight?: boolean): string[][] => 
 
 export const DEFAULT_CCY_PRECISION = 4;
 export const DEFAULT_TRADING_VIEW_INTERVAL = '15';
-export const VALUATION_PRIMARY_CURRENCY = 'USD';
-export const VALUATION_SECONDARY_CURRENCY = 'EUR';
+export const VALUATION_PRIMARY_CURRENCY = 'EUR';
+export const VALUATION_SECONDARY_CURRENCY = 'BTC';
 
 export const PASSWORD_ENTROPY_STEP = 6;
 
