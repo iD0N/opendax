@@ -266,7 +266,7 @@ export const en = {
     'page.body.openOrders.content.status.cancel': 'Stoppato',
     'page.body.openOrders.header.button.cancelAll': 'Cancella tutto',
 
-    'page.body.history.deposit': 'Elenco dei Depositi',
+    'page.body.history.deposit': 'Depositi',
     'page.body.history.deposit.header.txid': 'txID',
     'page.body.history.deposit.header.date': 'Data',
     'page.body.history.deposit.header.currency': 'Valuta',
@@ -280,7 +280,7 @@ export const en = {
     'page.body.history.deposit.content.status.skipped': 'Saltato',
     'page.body.history.deposit.content.status.processing': 'In elaborazione',
 
-    'page.body.history.withdraw': 'Elenco dei Prelievi',
+    'page.body.history.withdraw': 'Prelievi',
     'page.body.history.withdraw.header.id': 'ID',
     'page.body.history.withdraw.header.date': 'Data',
     'page.body.history.withdraw.header.currency': 'Valuta',
@@ -301,7 +301,7 @@ export const en = {
     'page.body.history.withdraw.content.status.confirming': 'In fase di conferma',
     'page.body.history.withdraw.content.status.errored': 'Errore',
 
-    'page.body.history.trade': 'Elenco degli scambi',
+    'page.body.history.trade': 'Ordini',
     'page.body.history.trade.header.id': 'ID',
     'page.body.history.trade.header.date': 'Data',
     'page.body.history.trade.header.side': 'Lato',
