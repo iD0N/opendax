@@ -39,9 +39,9 @@ export const TickerTable: React.FC<Props> = ({
                     <td>
                         <span>
                             {currencyQuote?.symbol || null}
-                            <Decimal fixed={market.amount_precision} thousSep=",">
+                            <Decimal fixed={2} thousSep=",">
                                 {market.last}
-                            </Decimal>
+                            </Decimal> &euro;
                         </span>
                     </td>
                     <td>

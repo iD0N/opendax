@@ -13,7 +13,7 @@ export const en = {
     'page.body.landing.marketInfo.title.button': 'Inizia qui',
 
     'page.body.landing.startTrading.title': 'Compra&Vendi subito',
-    'page.body.landing.startTrading.subtitle': 'Acquista, scambia e custodisci le principali criptovalute e token con tre semplici passi',
+    'page.body.landing.startTrading.subtitle': 'Scambia e custodisci le principali criptovalute e token con tre semplici passi',
 
     'page.body.landing.startTrading.box1.title': 'Registrati',
     'page.body.landing.startTrading.box1.text': 'Apri un Conto Personale, veloce, sicuro e gratuito, seguendo le facili istruzioni',
