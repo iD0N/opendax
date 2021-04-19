@@ -3,7 +3,7 @@ import { nationalitiesNames } from './nationalities';
 
 export const en = {
     'page.header.navbar.signIn': 'Entra',
-    'page.header.navbar.trade': 'Compra e Vendi',
+    'page.header.navbar.trade': 'Acquista e Vendi',
     'page.header.navbar.wallets': 'Wallets',
     'page.header.navbar.openOrders': 'Ordini',
     'page.header.navbar.history': 'Archivio',
@@ -15,8 +15,8 @@ export const en = {
     'page.sidebar.group.text': 'Livelli Commissioni:',
     'page.sidebar.group.value': 'Base',
 
-    'page.body.trade.header.market': 'Mercati',
-    'page.body.trade.header.yours': 'Tuoi',
+    'page.body.trade.header.market': 'Mercato',
+    'page.body.trade.header.yours': 'Utente',
 
     'page.body.trade.header.markets': 'Mercati',
     'page.body.trade.header.markets.content.market': 'Mercato',
@@ -28,7 +28,7 @@ export const en = {
     'page.body.trade.header.markets.content.volume': 'Volume',
 
     'page.body.trade.header.newOrder': 'Nuovo Ordine',
-    'page.body.trade.header.newOrder.content.tabs.buy': 'Compra',
+    'page.body.trade.header.newOrder.content.tabs.buy': 'Acquista',
     'page.body.trade.header.newOrder.content.tabs.sell': 'Vendi',
     'page.body.trade.header.newOrder.content.orderType': 'Tipo ordine',
     'page.body.trade.header.newOrder.content.orderType.limit': 'Limite',
@@ -65,7 +65,7 @@ export const en = {
     'page.body.trade.orderbook.header.amount': 'Quantità',
     'page.body.trade.orderbook.header.volume': 'Totale',
 
-    'page.body.trade.header.recentTrades': 'Ordini recenti',
+    'page.body.trade.header.recentTrades': 'Ultimi scambi',
     'page.body.trade.header.recentTrades.content.time': 'Data',
     'page.body.trade.header.recentTrades.content.price': 'Prezzo',
     'page.body.trade.header.recentTrades.content.amount': 'Quantità',
@@ -98,7 +98,7 @@ export const en = {
     'page.body.landing.header.button3': 'Registrati',
 
     'page.body.landing.marketInfo.title.text1': 'Benvenuti in Crypto Smart',
-    'page.body.landing.marketInfo.title.text2': 'Compra, Vendi e Scambia Crypto.',
+    'page.body.landing.marketInfo.title.text2': 'Acquista, Vendi e Scambia Crypto.',
     'page.body.landing.marketInfo.title.button': 'Inizia il Trading',
 
     'page.body.landing.platformInfo.item.first.value': '1000 miliardi',
@@ -155,7 +155,7 @@ export const en = {
 
     'page.body.wallets.locked': 'Bloccato',
     'page.body.wallets.balance': 'Saldo',
-    'page.body.wallets.tabs.deposit': 'Depositi',
+    'page.body.wallets.tabs.deposit': 'Deposita',
     'page.body.wallets.tabs.deposit.disabled.message': 'I Depositi sono disabilitati',
     'page.body.wallets.tabs.deposit.ccy.message.submit': 'Invia un deposito utilizzando il seguente indirizzo or QR code. Il deposito verrà accreditato dopo {confirmations} conferme',
     'page.body.wallets.tabs.deposit.ccy.message.address': 'Indirizzo Conto',
@@ -165,18 +165,17 @@ export const en = {
     'page.body.wallets.tabs.deposit.ccy.button.generate': 'Generare',
     'page.body.wallets.tabs.deposit.ccy.button.address': 'Indirizzo',
 
-    'page.body.wallets.tabs.deposit.fiat.message1': 'Deposita usando un Bonifico Bancario',
-    'page.body.wallets.tabs.deposit.fiat.message2': 'Utilizza queste credenziali per il bonifico bancario. Il wallet verrà aggiornato entro 2 giorni lavorativi.',
+    'page.body.wallets.tabs.deposit.fiat.message1': 'Deposita Euro effettuando un bonifico bancario',
+    'page.body.wallets.tabs.deposit.fiat.message2': 'Utilizza l’IBAN qui sotto per effettuare il bonifico bancario. Il tuo portafoglio sarà aggiornato con il deposito dei fondi entro 2-3 giorni lavorativi. I depositi devono provenire da un conto corrente intestato a tuo nome. I depositi provenienti da terze parti non saranno accettati e stornare il bonifico sarà soggetto a costi di commissioni.',
     'page.body.wallets.tabs.deposit.fiat.bankName': 'Banca',
-    'page.body.wallets.tabs.deposit.fiat.accountNumber': 'Numero di Conto Corrente',
+    'page.body.wallets.tabs.deposit.fiat.accountNumber': 'IBAN',
     'page.body.wallets.tabs.deposit.fiat.accountName': 'Intestatario del Conto',
-    'page.body.wallets.tabs.deposit.fiat.phoneNumber': 'Numero di Telefono',
-    'page.body.wallets.tabs.deposit.fiat.referenceCode': 'Il tuo Codice Promozionale',
+    'page.body.wallets.tabs.deposit.fiat.referenceCode': 'Codice Utente',
     'page.body.wallets.table.pending': 'In Attesa di verifica',
     'page.body.wallets.table.rejected': 'Rigettato',
     'page.body.wallets.tabs.deposit.fiat.admin': ' Per effettuare un Prelievo, contattare gli amministratori!',
 
-    'page.body.wallets.tabs.withdraw': 'Prelievo',
+    'page.body.wallets.tabs.withdraw': 'Preleva',
     'page.body.wallets.tabs.withdraw.content.amount': 'Quantità Prelievo',
     'page.body.wallets.tabs.withdraw.content.code2fa': 'Codice 2FA',
     'page.body.wallets.tabs.withdraw.content.fee': 'Commissione',
@@ -188,7 +187,7 @@ export const en = {
     'page.body.wallets.tabs.withdraw.modal.message1': 'Riceverai ',
     'page.body.wallets.tabs.withdraw.modal.message2': ' all\'Indirizzo',
     'page.body.wallets.tabs.withdraw.modal.button.cancel': 'Cancella',
-    'page.body.wallets.tabs.withdraw.modal.button.withdraw': 'Prelievo',
+    'page.body.wallets.tabs.withdraw.modal.button.withdraw': 'Preleva',
 
     'page.body.wallets.tabs.withdraw.content.enable2fa': 'Per prelevare deve essere abilitato il 2FA',
     'page.body.wallets.tabs.withdraw.content.enable2faButton': 'Abilita il 2FA',
@@ -214,7 +213,7 @@ export const en = {
     'page.body.wallets.beneficiaries.dropdown.fiat.fullName': 'Nome completo',
 
     'page.body.wallets.beneficiaries.addAddress': 'Aggiungi Indirizzo',
-    'page.body.wallets.beneficiaries.addAddressModal.header': 'Aggiungi Numero di Conto Corrente per il Prelievo',
+    'page.body.wallets.beneficiaries.addAddressModal.header': 'Aggiungi IBAN per il Prelievo',
 
     'page.body.wallets.beneficiaries.addAddressModal.body.coinAddress': 'Indirizzo Blockchain',
     'page.body.wallets.beneficiaries.addAddressModal.body.invalidAddress': 'Indirizzo non valido',
@@ -224,7 +223,7 @@ export const en = {
 
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatName': 'Descrizione',
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatFullName': 'Nome completo',
-    'page.body.wallets.beneficiaries.addAddressModal.body.fiatAccountNumber': 'Numero di Conto Corrente',
+    'page.body.wallets.beneficiaries.addAddressModal.body.fiatAccountNumber': 'IBAN',
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatBankName': 'Nome Banca',
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatBankSwiftCode': 'Codice Swift Banca (opzionale)',
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatIntermediaryBankName': 'Nome della Banca Intermediaria (opzionale)',
@@ -434,7 +433,7 @@ export const en = {
     'page.body.profile.verification.address.rejected.tooltip': 'Residenza rigettata',
     'page.body.profile.verification.pending': 'Da verificare',
     'page.body.profile.verification.reverify': 'Da riverificare',
-    'page.body.profile.verification.verify': 'Controllare',
+    'page.body.profile.verification.verify': 'Verifica',
     'page.body.profile.verification.verified': 'Verificato',
     'page.body.profile.verification.progress.level': 'Livello',
     'page.body.profile.verification.progress.tooltip.email.default': 'Verifica l\'Indirizzo e-mail per raggiungere il Livello 1 e fare Prelievi',
