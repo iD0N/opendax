@@ -20,7 +20,7 @@ const StartTradingThirdBoxIcon = require('../../assets/images/landing/startTradi
 const StartTradingLineIcon = require('../../assets/images/landing/startTrading/LineIcon.svg');
 
 const CheckIcon = require('../../assets/images/landing/CheckIcon.svg');
-const SimpleExchange = require('../../assets/images/landing/SimpleExchange.svg');
+const SimpleExchange = require('../../assets/images/landing/cryptosmartphone.jpg');
 
 const TwitterIcon = require('../../../assets/images/landing/social/Twitter.svg');
 const YouTubeIcon = require('../../../assets/images/landing/social/YouTube.svg');
@@ -162,9 +162,9 @@ class Landing extends React.Component<Props, State> {
     public renderStartTradingBlock() {
         return (
             <div className="pg-landing-screen__start-trading">
-                <div className="pg-landing-screen__start-trading__wrap">
+                <div className="pg-moblanding-screen__start-trading__wrap">
                     <MarketsTable />
-                    <div className="pg-landing-screen__start-trading__wrap__title">
+                    <div className="pg-moblanding-screen__start-trading__wrap__title">
                         <h1>{this.translate('page.body.landing.startTrading.title')}</h1>
                         <h2>{this.translate('page.body.landing.startTrading.subtitle')}</h2>
                     </div>
@@ -173,9 +173,7 @@ class Landing extends React.Component<Props, State> {
                             <img src={StartTradingFirstBoxIcon} alt="StartTradingFirstBoxIcon" />
                             <span>{this.translate('page.body.landing.startTrading.box1.title')}</span>
                             <span>{this.translate('page.body.landing.startTrading.box1.text')}</span>
-                            <Link to="/signup" className="landing-button">
-                                {this.translate('page.body.landing.startTrading.box1.button')}
-                            </Link>
+                            
                         </div>
                         <div className="pg-landing-screen__start-trading__wrap__box">
                             <img
@@ -211,18 +209,10 @@ class Landing extends React.Component<Props, State> {
         return (
             <div className="pg-landing-screen__platform-info">
                 <div className="pg-landing-screen__platform-info__wrap">
-                    <div className="pg-landing-screen__platform-info__wrap__item">
-                        <span>{this.translate('page.body.landing.platformInfo.item.first.value')}</span>
-                        <span>{this.translate('page.body.landing.platformInfo.item.first.title')}</span>
-                    </div>
-                    <div className="pg-landing-screen__platform-info__wrap__item">
-                        <span>{this.translate('page.body.landing.platformInfo.item.second.value')}</span>
-                        <span>{this.translate('page.body.landing.platformInfo.item.second.title')}</span>
-                    </div>
-                    <div className="pg-landing-screen__platform-info__wrap__item">
-                        <span>{this.translate('page.body.landing.platformInfo.item.third.value')}</span>
-                        <span>{this.translate('page.body.landing.platformInfo.item.third.title')}</span>
-                    </div>
+                <h1>Entra nel mondo Crypto Smart</h1>
+                    <Link to="/signup" className="landing-button">
+                                {this.translate('page.body.landing.startTrading.box1.button')}
+                            </Link>
                 </div>
             </div>
         );
@@ -240,20 +230,17 @@ class Landing extends React.Component<Props, State> {
                         </div>
                         <div className="pg-landing-screen__simple-exchange__wrap__content__text-row">
                             <img src={CheckIcon} alt="CheckIcon" />
-                            <span>{this.translate('page.body.landing.simpleExchange.content.text1')}</span>
+                            <span>{this.translate('page.body.landing.simpleExchange.content.text2')}</span>
                         </div>
                         <div className="pg-landing-screen__simple-exchange__wrap__content__text-row">
                             <img src={CheckIcon} alt="CheckIcon" />
-                            <span>{this.translate('page.body.landing.simpleExchange.content.text1')}</span>
+                            <span>{this.translate('page.body.landing.simpleExchange.content.text3')}</span>
                         </div>
                         <div className="pg-landing-screen__simple-exchange__wrap__content__text-row">
                             <img src={CheckIcon} alt="CheckIcon" />
-                            <span>{this.translate('page.body.landing.simpleExchange.content.text1')}</span>
+                            <span>{this.translate('page.body.landing.simpleExchange.content.text4')}</span>
                         </div>
-                        <div className="pg-landing-screen__simple-exchange__wrap__content__text-row">
-                            <img src={CheckIcon} alt="CheckIcon" />
-                            <span>{this.translate('page.body.landing.simpleExchange.content.text1')}</span>
-                        </div>
+                        
                     </div>
                     <img
                         className="pg-landing-screen__simple-exchange__wrap__image"
