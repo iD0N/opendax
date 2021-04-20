@@ -17,11 +17,11 @@ export const en = {
 
     'page.body.landing.startTrading.box1.title': 'Registrati',
     'page.body.landing.startTrading.box1.text': 'Apri un Conto Personale, veloce, sicuro e gratuito, seguendo le facili istruzioni',
-    'page.body.landing.startTrading.box1.button': 'Crea Conto',
+    'page.body.landing.startTrading.box1.button': 'Apri subito il tuo conto',
     'page.body.landing.startTrading.box2.title': 'Verifica dati',
     'page.body.landing.startTrading.box2.text': 'Per garantire la sicurezza, basta inserire e controllare alcuni dati personali nel totale rispetto della Privacy',
     'page.body.landing.startTrading.box3.title': 'Inizia a operare',
-    'page.body.landing.startTrading.box3.text': 'L’attivazione è immediata appena completata la registrazione. E’ possibile iniziare subito a operare su decine di criptovalute, token e asset digitali in tutto il mondo',
+    'page.body.landing.startTrading.box3.text': 'L’attivazione è immediata. Inizia subito a operare su decine di criptovalute, token e asset digitali in tutto il mondo',
 
     'page.body.marketsTable.header.pair': 'Nome',
     'page.body.marketsTable.header.trade': 'Compra/Vendi',
