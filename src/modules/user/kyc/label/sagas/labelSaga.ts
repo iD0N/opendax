@@ -15,7 +15,8 @@ export function* labelSaga(action: LabelFetch) {
         payload.map((data, key) => {
             console.log("12345"+ JSON.stringify(data));
             //modifica del payload per far vedere  sulla pagina web il profilo come verificato
-            if (data.key === 'profile' && data.value ==='submitted') data.value = 'verified'; 
+            if (data.key === 'profile' && data.value ==='submitted') data.value = 'verified';
+            if (data.key === 'document' && data.value ==='pending') data.value = 'verified'; 
              modpayload.push(data);
         });
         console.log("12345"+ JSON.stringify(modpayload));

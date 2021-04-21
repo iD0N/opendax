@@ -9,19 +9,19 @@ export const en = {
     'page.body.landing.header.center.link.blog': ' ',
 
     'page.body.landing.marketInfo.title.text1': 'Entra nel mondo Crypto in modo facile',
-    'page.body.landing.marketInfo.title.text2': 'scegli la prima piattaforma italiana di asset digitali',
+    'page.body.landing.marketInfo.title.text2': 'Scegli la prima piattaforma italiana di asset digitali',
     'page.body.landing.marketInfo.title.button': 'Inizia qui',
 
-    'page.body.landing.startTrading.title': 'Compra&Vendi subito',
-    'page.body.landing.startTrading.subtitle': 'Scambia e custodisci le principali criptovalute e token con tre semplici passi',
+    'page.body.landing.startTrading.title': 'Compra & Vendi subito',
+    'page.body.landing.startTrading.subtitle': 'Scambia e custodisci le principali criptovalute e asset digitali con tre semplici passi',
 
     'page.body.landing.startTrading.box1.title': 'Registrati',
-    'page.body.landing.startTrading.box1.text': 'Apri un Conto Personale, veloce, sicuro e gratuito, seguendo le facili istruzioni',
-    'page.body.landing.startTrading.box1.button': 'Apri subito il tuo conto',
+    'page.body.landing.startTrading.box1.text': 'Apri un account personale, veloce, sicuro e gratuito, seguendo le facili istruzioni crei subito il tuo conto',
+    'page.body.landing.startTrading.box1.button': 'Apri subito il tuo account',
     'page.body.landing.startTrading.box2.title': 'Verifica dati',
-    'page.body.landing.startTrading.box2.text': 'Per garantire la sicurezza, basta inserire e controllare alcuni dati personali nel totale rispetto della Privacy',
+    'page.body.landing.startTrading.box2.text': 'Per garantire la sicurezza, basta inserire e verificare alcuni dati personali nel totale rispetto della Privacy',
     'page.body.landing.startTrading.box3.title': 'Inizia a operare',
-    'page.body.landing.startTrading.box3.text': 'L’attivazione è immediata. Inizia subito a operare su decine di criptovalute, token e asset digitali in tutto il mondo',
+    'page.body.landing.startTrading.box3.text': 'L’attivazione è immediata. Inizia subito a operare su decine di criptovalute, tokens e asset digitali',
 
     'page.body.marketsTable.header.pair': 'Nome',
     'page.body.marketsTable.header.trade': 'Compra/Vendi',

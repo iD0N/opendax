@@ -108,6 +108,10 @@
     position: fixed;
     top: 0;
     z-index: 99;
+    a:hover {
+          color: #00c369;
+        }
+
 
     &--scrolled {
       background: var(--primary-cta-color);
@@ -228,7 +232,7 @@
 
         
           h1 {
-            font-size: 50px;
+            font-size: 45px;
             font-weight: 400;
             letter-spacing: 0.005em;
             line-height: 70px;
@@ -305,9 +309,9 @@
 
       h3 {
         color: var(--primary-text-color);
-        font-size: 20px;
+        font-size: 25px;
         font-weight: 600;
-       
+        margin-top:15px;
       }
 
       &__content {
@@ -332,7 +336,7 @@
           font-weight: 300;
           letter-spacing: 0.005em;
           line-height: 25px;
-          margin-bottom: 24px;
+          margin-bottom: 5px;
           text-align: center;
 
           &:first-child {
@@ -389,8 +393,18 @@
       }
 
       &__text-row {
+        
         margin: 12px 0;
         max-width: 596px;
+
+      &__icon {
+        width: 40px;
+        float: left;
+        }
+
+      &__testo {
+        margin-left: 50px;
+      }
 
       &__image {
         padding-top:30px;
@@ -400,8 +414,8 @@
 
         img {  
           margin-right: 18px;
-          max-height: 22px;
-          max-width: 22px;
+          max-height: 40px;
+          max-width: 40px;
         }
 
         span {
@@ -416,7 +430,11 @@
   }
 
   &__news {
-    background: var(--landing-light-background-color);
+    background: #f5f6f7;
+     background: url(custom/assets/images/landing/bg04.png);
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: cover;
 
     &__wrap {
       margin: 100px 0;

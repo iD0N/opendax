@@ -171,6 +171,25 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
         const dataCountries = Object.values(countries.getNames(lang)).map(item => {
             return { label: item, value: item };
         });
+        
+        const statoOccupazionale = [
+            {
+              label: "Apple",
+              value: "apple",
+            },
+            {
+              label: "Mango",
+              value: "mango",
+            },
+            {
+              label: "Banana",
+              value: "banana",
+            },
+            {
+              label: "Pineapple",
+              value: "pineapple",
+            },
+          ];
 
         return (
           <form className="pg-confirm__content-identity" autoComplete="on">
@@ -293,6 +312,16 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                     </fieldset>
 
                 </div>
+                <div className="pg-confirm__content-identity__forms__row__content ">
+                        <SearchDropdown
+                            className="pg-confirm__content-identity__forms__row__content-number-dropdown"
+                            options={statoOccupazionale }
+                            onSelect={ this.selectCountry}
+                            placeholder={"stato occupazionale"}
+                        />
+                    </div>
+
+
               </div>
               {sendSuccess && !editSuccess && <p className="pg-confirm__success">{this.translate(sendSuccess)}</p>}
               {editSuccess && !sendSuccess && <p className="pg-confirm__success">{this.translate(editSuccess)}</p>}

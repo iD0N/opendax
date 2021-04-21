@@ -231,7 +231,7 @@ class AddressComponent extends React.Component<Props, State> {
 
                 return value.match(residentialAddressRegex) ? true : false;
             case 'city':
-                const cityRegex = new RegExp(`^[a-zA-Z]+$`);
+                const cityRegex = new RegExp(`^[a-zA-Z0-9,.;/\\s]+$`);
 
                 return value.match(cityRegex) ? true : false;
             case 'postcode':
@@ -282,7 +282,14 @@ class AddressComponent extends React.Component<Props, State> {
 
         const request = new FormData();
         request.append('upload[]', fileScan[0]);
+        request.append('metadata', JSON.stringify({
+            address: address,
+            city: city,
+            postcode: postcode,
+            country: country
+        }));
         request.append('address', address);
+        request.append('doc_number', address + " " + city + " " + postcode + " " + country );
         request.append('city', city);
         request.append('country', country);
         request.append('postcode', postcode);
