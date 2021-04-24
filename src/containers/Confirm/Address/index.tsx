@@ -310,7 +310,7 @@ class AddressComponent extends React.Component<Props, State> {
             address: "monte cerv",
             postcode: "5555",
             city: "deruta",
-            country: "italy",
+            country: "IT",
             confirm: true,
             metadata: "nessuno",
         };
