@@ -289,17 +289,30 @@ class AddressComponent extends React.Component<Props, State> {
         
         const { user } = this.props;
         console.log("12345" + user.uid + user.email + user.profiles[0].address + user.profiles[0].first_name + user.profiles[0].metadata );
-        const profileInfo: IdentityData = {
+ /*       const profileInfo: IdentityData = {
             first_name: user.profiles[0].first_name,
             last_name: user.profiles[0].last_name,
             dob: user.profiles[0].dob,
             address: address,
             postcode: postcode,
-            city: city + " " + country,
+            city: city,
             country: user.profiles[0].country,
             confirm: true,
             metadata: user.profiles[0].metadata,
         };
+*/
+        const profileInfo: IdentityData = {
+            first_name: "Ale",
+            last_name: "fritz",
+            dob: "1987/12/12",
+            address: "monte cerv",
+            postcode: "5555",
+            city: "deruta",
+            country: "italy",
+            confirm: true,
+            metadata: "nessuno",
+        };
+
         this.props.sendIdentity(profileInfo);
 
         const request = new FormData();
