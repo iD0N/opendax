@@ -165,7 +165,7 @@ class Landing extends React.Component<Props, State> {
                 <div className="pg-moblanding-screen__start-trading__wrap">
                     <MarketsTable />
                     <div className="pg-moblanding-screen__start-trading__wrap__title">
-                        <h1>{this.translate('page.body.landing.startTrading.title')}</h1>
+                        <h1>Compra&Vendi subito</h1>
                         <h2>{this.translate('page.body.landing.startTrading.subtitle')}</h2>
                     </div>
                     <div className="pg-landing-screen__start-trading__wrap__content">

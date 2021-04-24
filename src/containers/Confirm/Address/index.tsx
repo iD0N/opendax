@@ -11,21 +11,28 @@ import { IntlProps } from '../../../';
 import { languages } from '../../../api/config';
 import { CustomInput, SearchDropdown, UploadFile } from '../../../components';
 import {
+    editIdentity,
+    User,
     alertPush,
     RootState,
     selectCurrentLanguage,
     selectMobileDeviceState,
     selectSendAddressesSuccess,
     sendAddresses,
+    selectUserInfo,
 } from '../../../modules';
+import { IdentityData } from '../../../modules/user/kyc/identity/types';
+
 
 interface ReduxProps {
     lang: string;
     success?: string;
     isMobileDevice: boolean;
+    user: User;
 }
 
 interface DispatchProps {
+    editIdentity: typeof editIdentity;
     sendAddresses: typeof sendAddresses;
     fetchAlert: typeof alertPush;
 }
@@ -279,6 +286,21 @@ class AddressComponent extends React.Component<Props, State> {
             fileScan,
             postcode,
         } = this.state;
+        
+        const { user } = this.props;
+        console.log("12345" + user.uid + user.email + user.profiles[0].address + user.profiles[0].first_name + user.profiles[0].metadata );
+        const profileInfo: IdentityData = {
+            first_name: user.profiles[0].first_name,
+            last_name: user.profiles[0].last_name,
+            dob: user.profiles[0].dob,
+            address: address,
+            postcode: postcode,
+            city: city + " " + country,
+            country: user.profiles[0].country,
+            confirm: true,
+            metadata: user.profiles[0].metadata,
+        };
+        this.props.editIdentity(profileInfo);
 
         const request = new FormData();
         request.append('upload[]', fileScan[0]);
@@ -289,7 +311,6 @@ class AddressComponent extends React.Component<Props, State> {
             country: country
         }));
         request.append('address', address);
-        request.append('doc_number', address + " " + city + " " + postcode + " " + country );
         request.append('city', city);
         request.append('country', country);
         request.append('postcode', postcode);
@@ -304,10 +325,12 @@ const mapStateToProps = (state: RootState): ReduxProps => ({
     lang: selectCurrentLanguage(state),
     success: selectSendAddressesSuccess(state),
     isMobileDevice: selectMobileDeviceState(state),
+    user: selectUserInfo(state),
 });
 
 const mapDispatchToProps: MapDispatchToPropsFunction<DispatchProps, {}> =
     dispatch => ({
+        editIdentity: payload => dispatch(editIdentity(payload)),
         fetchAlert: payload => dispatch(alertPush(payload)),
         sendAddresses: payload => dispatch(sendAddresses(payload)),
     });
