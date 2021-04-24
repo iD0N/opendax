@@ -12,6 +12,7 @@ import { languages } from '../../../api/config';
 import { CustomInput, SearchDropdown, UploadFile } from '../../../components';
 import {
     sendIdentity,
+    selectSendIdentitySuccess,
     User,
     alertPush,
     RootState,
@@ -27,6 +28,7 @@ import { IdentityData } from '../../../modules/user/kyc/identity/types';
 interface ReduxProps {
     lang: string;
     success?: string;
+    sendSuccess?: string;
     isMobileDevice: boolean;
     user: User;
 }
@@ -339,6 +341,7 @@ class AddressComponent extends React.Component<Props, State> {
 const mapStateToProps = (state: RootState): ReduxProps => ({
     lang: selectCurrentLanguage(state),
     success: selectSendAddressesSuccess(state),
+    sendSuccess: selectSendIdentitySuccess(state),
     isMobileDevice: selectMobileDeviceState(state),
     user: selectUserInfo(state),
 });
