@@ -11,7 +11,7 @@ import { IntlProps } from '../../../';
 import { languages } from '../../../api/config';
 import { CustomInput, SearchDropdown, UploadFile } from '../../../components';
 import {
-    editIdentity,
+    sendIdentity,
     User,
     alertPush,
     RootState,
@@ -32,7 +32,7 @@ interface ReduxProps {
 }
 
 interface DispatchProps {
-    editIdentity: typeof editIdentity;
+    sendIdentity: typeof sendIdentity;
     sendAddresses: typeof sendAddresses;
     fetchAlert: typeof alertPush;
 }
@@ -300,7 +300,7 @@ class AddressComponent extends React.Component<Props, State> {
             confirm: true,
             metadata: user.profiles[0].metadata,
         };
-        this.props.editIdentity(profileInfo);
+        this.props.sendIdentity(profileInfo);
 
         const request = new FormData();
         request.append('upload[]', fileScan[0]);
@@ -314,6 +314,8 @@ class AddressComponent extends React.Component<Props, State> {
         request.append('city', city);
         request.append('country', country);
         request.append('postcode', postcode);
+
+        console.log("123456 " + address + city);
 
         this.props.sendAddresses(request);
     };
@@ -330,7 +332,7 @@ const mapStateToProps = (state: RootState): ReduxProps => ({
 
 const mapDispatchToProps: MapDispatchToPropsFunction<DispatchProps, {}> =
     dispatch => ({
-        editIdentity: payload => dispatch(editIdentity(payload)),
+        sendIdentity: payload => dispatch(sendIdentity(payload)),
         fetchAlert: payload => dispatch(alertPush(payload)),
         sendAddresses: payload => dispatch(sendAddresses(payload)),
     });
