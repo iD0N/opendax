@@ -16,6 +16,7 @@ import {
     editIdentity,
     Label,
     labelFetch,
+    userFetch,
     RootState,
     selectCurrentLanguage,
     selectEditIdentitySuccess,
@@ -25,6 +26,15 @@ import {
     sendIdentity,
     User,
 } from '../../../modules';
+import { 
+    optionOccupazione,
+    optionSettore,
+    optionDoveAttivita,
+    optionReddito,
+    optionOrigineFondi,
+    optionInvestimentoAnno
+} from './aml'
+
 import { IdentityData } from '../../../modules/user/kyc/identity/types';
 
 import * as countries from 'i18n-iso-countries';
@@ -41,6 +51,7 @@ interface DispatchProps {
     editIdentity: typeof editIdentity;
     sendIdentity: typeof sendIdentity;
     labelFetch: typeof labelFetch;
+    userFetch: typeof userFetch;
 }
 
 interface OnChangeEvent {
@@ -58,6 +69,12 @@ interface IdentityState {
     postcode: string;
     fiscalcode: string;
     residentialAddress: string;
+    occupazione: string;
+    settore: string;
+    doveAttivita: string;
+    origineFondi: string;
+    reddito: string;
+    investimentoAnno: string;
     cityFocused: boolean;
     dateOfBirthFocused: boolean;
     firstNameFocused: boolean;
@@ -79,6 +96,12 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
         postcode: '',
         fiscalcode: '',
         residentialAddress: '',
+        occupazione: '', 
+        settore: '',
+        doveAttivita: '',
+        origineFondi: '',
+        reddito: '',
+        investimentoAnno: '',
         cityFocused: false,
         dateOfBirthFocused: false,
         firstNameFocused: false,
@@ -116,16 +139,12 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             dateOfBirth,
             firstName,
             lastName,
-            postcode,
             fiscalcode,
-            residentialAddress,
             cityFocused,
             dateOfBirthFocused,
             firstNameFocused,
             lastNameFocused,
-            postcodeFocused,
             fiscalcodeFocused,
-            residentialAddressFocused,
         } = this.state;
 
         const firstNameGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
@@ -143,19 +162,10 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             'pg-confirm__content-identity__forms__row__content--wrong': dateOfBirth && !this.handleValidateInput('dateOfBirth', dateOfBirth),
         });
 
-        const residentialAddressGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
-            'pg-confirm__content-identity__forms__row__content--focused': residentialAddressFocused,
-            'pg-confirm__content-identity__forms__row__content--wrong': residentialAddress && !this.handleValidateInput('residentialAddress', residentialAddress),
-        });
-
+        
         const cityGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
             'pg-confirm__content-identity__forms__row__content--focused': cityFocused,
             'pg-confirm__content-identity__forms__row__content--wrong': city && !this.handleValidateInput('city', city),
-        });
-
-        const postcodeGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
-            'pg-confirm__content-identity__forms__row__content--focused': postcodeFocused,
-            'pg-confirm__content-identity__forms__row__content--wrong': postcode && !this.handleValidateInput('postcode', postcode),
         });
 
         const fiscalcodeGroupClass = cr('pg-confirm__content-identity__forms__row__content', {
@@ -172,25 +182,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             return { label: item, value: item };
         });
         
-        const statoOccupazionale = [
-            {
-              label: "Apple",
-              value: "apple",
-            },
-            {
-              label: "Mango",
-              value: "mango",
-            },
-            {
-              label: "Banana",
-              value: "banana",
-            },
-            {
-              label: "Pineapple",
-              value: "pineapple",
-            },
-          ];
-
+        
         return (
           <form className="pg-confirm__content-identity" autoComplete="on">
             <div className="pg-confirm__content-identity__forms">
@@ -224,6 +216,19 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                     </fieldset>
                 </div>
                 <div className="pg-confirm__content-identity__forms__row input-group">
+                <fieldset className={cityGroupClass}>
+                        <CustomInput
+                            type="string"
+                            name="ship-city"
+                            autoComplete="shipping locality"
+                            inputValue={city}
+                            handleChangeInput={e => this.handleChange(e, 'city')}
+                            placeholder={('in quale città sei nato')}
+                            label={this.translate('page.body.kyc.identity.city')}
+                            defaultLabel={''}
+                            handleFocusInput={this.handleFieldFocus('city')}
+                        />
+                    </fieldset>
                     <fieldset className={dateOfBirthGroupClass}>
                         <div className="custom-input">
                             {dateOfBirth ? <label>{this.translate('page.body.kyc.identity.dateOfBirth')}</label> : null}
@@ -246,7 +251,7 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                             className="pg-confirm__content-identity__forms__row__content-number-dropdown"
                             options={dataCountries}
                             onSelect={this.selectCountry}
-                            placeholder={this.translate('page.body.kyc.identity.CoR')}
+                            placeholder={('in quale paese sei nato')}
                         />
                     </div>
                 </div>
@@ -264,62 +269,56 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                             handleFocusInput={this.handleFieldFocus('fiscalcode')}
                         />
                     </fieldset>
-                
-                
-                    <fieldset className={residentialAddressGroupClass}>
-                        <CustomInput
-                            type="string"
-                            name="ship-address"
-                            autoComplete="shipping street-address"
-                            inputValue={residentialAddress}
-                            placeholder={this.translate('page.body.kyc.identity.residentialAddress')}
-                            label={this.translate('page.body.kyc.identity.residentialAddress')}
-                            defaultLabel={''}
-                            handleChangeInput={e => this.handleChange(e, 'residentialAddress')}
-                            handleFocusInput={this.handleFieldFocus('residentialAddress')}
-                        />
-                    </fieldset>
-                   
-                
-                <div className="pg-confirm__content-identity__forms__row input-group">
-                <fieldset className={cityGroupClass}>
-                        <CustomInput
-                            type="string"
-                            name="ship-city"
-                            autoComplete="shipping locality"
-                            inputValue={city}
-                            handleChangeInput={e => this.handleChange(e, 'city')}
-                            placeholder={this.translate('page.body.kyc.identity.city')}
-                            label={this.translate('page.body.kyc.identity.city')}
-                            defaultLabel={''}
-                            handleFocusInput={this.handleFieldFocus('city')}
-                        />
-                    </fieldset>
-                   
-                    <fieldset className={postcodeGroupClass}>
-                        <CustomInput
-                            label={this.translate('page.body.kyc.identity.postcode')}
-                            defaultLabel={this.translate('page.body.kyc.identity.postcode')}
-                            type="string"
-                            name="ship-zip"
-                            autoComplete="shipping postal-code"
-                            inputValue={postcode}
-                            handleChangeInput={e => this.handleChange(e, 'postcode')}
-                            onKeyPress={this.handleConfirmEnterPress}
-                            placeholder={this.translate('page.body.kyc.identity.postcode')}
-                            handleFocusInput={this.handleFieldFocus('postcode')}
-                        />
-                    </fieldset>
-
-                </div>
                 <div className="pg-confirm__content-identity__forms__row__content ">
                         <SearchDropdown
                             className="pg-confirm__content-identity__forms__row__content-number-dropdown"
-                            options={statoOccupazionale }
-                            onSelect={ this.selectCountry}
-                            placeholder={"stato occupazionale"}
+                            options={optionOccupazione }
+                            onSelect={ this.selectOccupazione}
+                            placeholder={"Qual è il tuo attuale stato occupazionale?"}
                         />
                     </div>
+                  
+                    <div className="pg-confirm__content-identity__forms__row__content ">
+                        <SearchDropdown
+                            className="pg-confirm__content-identity__forms__row__content-number-dropdown"
+                            options={optionSettore }
+                            onSelect={ this.selectSettore}
+                            placeholder={"Qual è il settore in cui operi?"}
+                        />
+                    </div>
+
+                    <div className="pg-confirm__content-identity__forms__row__content ">
+                        <SearchDropdown
+                            className="pg-confirm__content-identity__forms__row__content-number-dropdown"
+                            options={optionDoveAttivita }
+                            onSelect={ this.selectDoveAttivita}
+                            placeholder={"Dove si concentra la tua attività lavorativa?"}
+                        />
+                    </div>
+                    <div className="pg-confirm__content-identity__forms__row__content ">
+                        <SearchDropdown
+                            className="pg-confirm__content-identity__forms__row__content-number-dropdown"
+                            options={optionReddito }
+                            onSelect={ this.selectReddito}
+                            placeholder={"Quanto è il tuo reddito annuo lordo?"}
+                        />
+                    </div><div className="pg-confirm__content-identity__forms__row__content ">
+                        <SearchDropdown
+                            className="pg-confirm__content-identity__forms__row__content-number-dropdown"
+                            options={optionOrigineFondi}
+                            onSelect={ this.selectOrigineFondi}
+                            placeholder={"origine dei fondi che impiegherai su Cryptosmart?"}
+                        />
+                    </div><div className="pg-confirm__content-identity__forms__row__content ">
+                        <SearchDropdown
+                            className="pg-confirm__content-identity__forms__row__content-number-dropdown"
+                            options={optionInvestimentoAnno}
+                            onSelect={ this.selectInvestimentoAnno}
+                            placeholder={"Qual è l’ammontare che prevedi di investire?"}
+                        />
+
+                    </div>
+                    
 
 
               </div>
@@ -422,6 +421,38 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             countryOfBirth: countries.getAlpha2Code(option.value, this.props.lang),
         });
     };
+    
+    private selectOccupazione = option => {
+        this.setState({
+            occupazione: option.value
+        });
+    };
+    private selectSettore = option => {
+        this.setState({
+            settore: option.value
+        });
+    };
+    private selectDoveAttivita = option => {
+        this.setState({
+            doveAttivita: option.value
+        });
+    };
+    private selectReddito = option => {
+        this.setState({
+            reddito: option.value
+        });
+    };
+    private selectOrigineFondi = option => {
+        this.setState({
+            origineFondi: option.value
+        });
+    };
+    private selectInvestimentoAnno = option => {
+        this.setState({
+            investimentoAnno: option.value
+        });
+    };
+
 
     private handleValidateInput = (field: string, value: string): boolean => {
         switch (field) {
@@ -464,29 +495,35 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
             dateOfBirth,
             firstName,
             lastName,
-            postcode,
             fiscalcode,
-            residentialAddress,
             countryOfBirth,
+            occupazione,
+            settore,
+            doveAttivita,
+            origineFondi,
+            reddito,
+            investimentoAnno,
         } = this.state;
 
         const firstNameValid = this.handleValidateInput('firstName', firstName);
         const lastNameValid = this.handleValidateInput('lastName', lastName);
-        const residentialAddressValid = this.handleValidateInput('residentialAddress', residentialAddress);
         const cityValid = this.handleValidateInput('city', city);
-        const postcodeValid = this.handleValidateInput('postcode', postcode);
         const fiscalcodeValid = this.handleValidateInput('fiscalcode', fiscalcode);
         const dateOfBirthValid = this.handleValidateInput('dateOfBirth', dateOfBirth);
 
         return (
             !firstNameValid
             || !lastNameValid
-            || !residentialAddressValid
             || !countryOfBirth
             || !cityValid
-            || !postcodeValid
             || !fiscalcodeValid
             || !dateOfBirthValid
+            || !occupazione
+            || !settore
+            || !doveAttivita
+            || !origineFondi
+            || !reddito
+            || !investimentoAnno
         );
     };
 
@@ -510,10 +547,14 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
                 first_name: this.state.firstName,
                 last_name: this.state.lastName,
                 dob,
-                address: this.state.residentialAddress,
-                postcode: this.state.postcode,
-                city: this.state.city,
-                country: this.state.countryOfBirth
+                occupazione: this.state.occupazione,
+                settore: this.state.settore,
+                doveAttivita: this.state.doveAttivita,
+                origineFondi: this.state.origineFondi,
+                reddito: this.state.reddito,
+                investimentoAnno: this.state.investimentoAnno,
+                city_birth: this.state.city,
+                country_birth: this.state.countryOfBirth
             }),
         };
         const isIdentity = labels.length && labels.find(w => w.key === 'profile' && w.value === 'verified' && w.scope === 'private');
@@ -525,6 +566,9 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
         } else {
             this.props.sendIdentity(profileInfo);
         }
+
+        //this.props.userFetch();
+        //window.location.reload();
     };
 }
 
@@ -541,6 +585,7 @@ const mapDispatchToProps: MapDispatchToPropsFunction<DispatchProps, {}> =
         editIdentity: payload => dispatch(editIdentity(payload)),
         sendIdentity: payload => dispatch(sendIdentity(payload)),
         labelFetch: () => dispatch(labelFetch()),
+        userFetch: () => dispatch(userFetch()),
     });
 
 export const Identity = compose(

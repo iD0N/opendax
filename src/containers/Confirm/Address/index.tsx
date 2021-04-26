@@ -14,6 +14,7 @@ import {
     sendIdentity,
     selectSendIdentitySuccess,
     User,
+    userFetch,
     alertPush,
     RootState,
     selectCurrentLanguage,
@@ -22,8 +23,8 @@ import {
     sendAddresses,
     selectUserInfo,
 } from '../../../modules';
-import { IdentityData } from '../../../modules/user/kyc/identity/types';
-
+import { IdentityData, ProfileMetadata } from '../../../modules/user/kyc/identity/types';
+import { formatDate} from '../../../helpers';
 
 interface ReduxProps {
     lang: string;
@@ -37,6 +38,7 @@ interface DispatchProps {
     sendIdentity: typeof sendIdentity;
     sendAddresses: typeof sendAddresses;
     fetchAlert: typeof alertPush;
+    userFetch: typeof userFetch;
 }
 
 interface State {
@@ -63,6 +65,16 @@ class AddressComponent extends React.Component<Props, State> {
         postcodeFocused: false,
         fileScan: [],
     };
+
+    componentDidMount() {
+        const check = typeof this.props.user.profiles[0];
+        console.log("8888 "+ check );
+        if (typeof this.props.user.profiles[0] === 'undefined') {
+            this.props.userFetch();
+        } else {
+            console.log("8888 "+this.props.user.profiles[0].metadata );
+        }
+    }
 
     public UNSAFE_componentWillReceiveProps(next: Props) {
         if (next.success && !this.props.success) {
@@ -193,6 +205,10 @@ class AddressComponent extends React.Component<Props, State> {
         this.setState({
             [key]: value,
         });
+        
+        if (typeof this.props.user.profiles[0] === 'undefined') {
+            this.props.userFetch();
+        } 
     };
 
     private handleFieldFocus = (field: string) => {
@@ -288,33 +304,61 @@ class AddressComponent extends React.Component<Props, State> {
             fileScan,
             postcode,
         } = this.state;
+
+        //const { user } = this.props;
         
-        const { user } = this.props;
-        console.log("12345" + user.uid + user.email + user.profiles[0].address + user.profiles[0].first_name + user.profiles[0].metadata );
- /*       const profileInfo: IdentityData = {
-            first_name: user.profiles[0].first_name,
-            last_name: user.profiles[0].last_name,
-            dob: user.profiles[0].dob,
+        
+        const oldProfile : ProfileMetadata = JSON.parse(this.props.user.profiles[0].metadata as string);
+        
+        const {
+            uid,
+            email,
+            fiscalcode,
+            first_name,
+            last_name,
+            dob,
+            country_birth,
+            city_birth,
+            occupazione,
+            settore,
+            doveAttivita,
+            origineFondi,
+            reddito,
+            investimentoAnno,
+        } = oldProfile;
+
+        const profileInfo: IdentityData = {
+            first_name: first_name as string,
+            last_name: last_name as string,
+            dob: formatDate(dob as string),
             address: address,
             postcode: postcode,
-            city: city,
-            country: user.profiles[0].country,
+            city: city + " codice paese " + country,
+            country: country_birth as string,
             confirm: true,
-            metadata: user.profiles[0].metadata,
+            metadata: JSON.stringify({
+                uid: uid,
+                email: email,
+                phone: "",
+                fiscalcode: fiscalcode,
+                first_name: first_name,
+                last_name: last_name,
+                dob: dob,
+                address: address,
+                postcode: postcode,
+                city_residence: city,
+                country_birth: country_birth,
+                country_residence: country,
+                city_birth: city_birth,
+                occupazione: occupazione,
+                settore: settore,
+                doveAttivita: doveAttivita,
+                origineFondi: origineFondi,
+                reddito: reddito,
+                investimentoAnno: investimentoAnno,
+            }),
         };
-*/
-        const profileInfo: IdentityData = {
-            first_name: "Ale",
-            last_name: "fritz",
-            dob: "1987/12/12",
-            address: "monte cerv",
-            postcode: "5555",
-            city: "deruta",
-            country: "IT",
-            confirm: true,
-            metadata: "nessuno",
-        };
-
+ 
         this.props.sendIdentity(profileInfo);
 
         const request = new FormData();
@@ -333,9 +377,11 @@ class AddressComponent extends React.Component<Props, State> {
         console.log("123456 " + address + city);
 
         this.props.sendAddresses(request);
+
     };
 
     private translate = (key: string) => this.props.intl.formatMessage({id: key});
+
 }
 
 const mapStateToProps = (state: RootState): ReduxProps => ({
@@ -351,6 +397,7 @@ const mapDispatchToProps: MapDispatchToPropsFunction<DispatchProps, {}> =
         sendIdentity: payload => dispatch(sendIdentity(payload)),
         fetchAlert: payload => dispatch(alertPush(payload)),
         sendAddresses: payload => dispatch(sendAddresses(payload)),
+        userFetch: () => dispatch(userFetch()),
     });
 
 export const Address = compose(
