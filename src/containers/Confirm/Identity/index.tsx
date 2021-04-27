@@ -457,23 +457,23 @@ class IdentityComponent extends React.Component<Props, IdentityState> {
     private handleValidateInput = (field: string, value: string): boolean => {
         switch (field) {
             case 'firstName':
-                const firstNameRegex = new RegExp(`^[a-zA-Z]{1,100}$`);
+                const firstNameRegex = new RegExp(`^[a-zA-Z0-9-,.;/\\s]+$`);
 
                 return value.match(firstNameRegex) ? true : false;
             case 'lastName':
-                const lastNameRegex = new RegExp(`^[a-zA-Z]{1,100}$`);
+                const lastNameRegex = new RegExp(`^[a-zA-Z0-9-,.;/\\s]+$`);
 
                 return value.match(lastNameRegex) ? true : false;
             case 'residentialAddress':
-                const residentialAddressRegex = new RegExp(`^[a-zA-Z0-9-,.;/\\s]+$`);
+                const residentialAddressRegex = new RegExp(`^[a-zA-Z0-9-',.;/\\s]+$`);
 
                 return value.match(residentialAddressRegex) ? true : false;
             case 'city':
-                const cityRegex = new RegExp(`^[a-zA-Z0-9-,.;/\\s]+$`);
+                const cityRegex = new RegExp(`^[a-zA-Z0-9-',.;/\\s]+$`);
 
                 return value.match(cityRegex) ? true : false;
             case 'postcode':
-                const postcodeRegex = new RegExp(`^[0-9]{1,7}$`);
+                const postcodeRegex = new RegExp(`^[a-zA-Z0-9-,.;/\\s]+$`);
                 return value.match(postcodeRegex) ? true : false;
             case 'fiscalcode':
                 const fiscalcodeRegex = new RegExp(`^[a-zA-Z0-9]{16,16}$`);
