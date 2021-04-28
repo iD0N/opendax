@@ -170,6 +170,7 @@ export const en = {
     'page.body.wallets.tabs.deposit.fiat.bankName': 'Banca',
     'page.body.wallets.tabs.deposit.fiat.accountNumber': 'IBAN',
     'page.body.wallets.tabs.deposit.fiat.accountName': 'Intestatario del Conto',
+    'page.body.wallets.tabs.deposit.fiat.phoneNumber': 'IMPORTANTE inserisci come causale del bonifico il tuo codice utente Crypto Smart che trovi qui sotto, altrimenti il bonifico non potrà essere accettato.',
     'page.body.wallets.tabs.deposit.fiat.referenceCode': 'Codice Utente',
     'page.body.wallets.table.pending': 'In Attesa di verifica',
     'page.body.wallets.table.rejected': 'Rigettato',
@@ -210,7 +211,7 @@ export const en = {
     'page.body.wallets.beneficiaries.dropdown.fiat.beneficiary': 'Beneficiario',
     'page.body.wallets.beneficiaries.dropdown.fiat.description': 'Descrizione',
     'page.body.wallets.beneficiaries.dropdown.fiat.name': 'Nome',
-    'page.body.wallets.beneficiaries.dropdown.fiat.fullName': 'Nome completo',
+    'page.body.wallets.beneficiaries.dropdown.fiat.fullName': 'IBAN',
 
     'page.body.wallets.beneficiaries.addAddress': 'Aggiungi coordinate bancarie',
     'page.body.wallets.beneficiaries.addAddressModal.header': 'Aggiungi IBAN per il Prelievo',
@@ -222,9 +223,9 @@ export const en = {
     'page.body.wallets.beneficiaries.addAddressModal.body.coinDestinationTag': 'Tag destinazione (opzionale)',
 
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatName': 'Descrizione',
-    'page.body.wallets.beneficiaries.addAddressModal.body.fiatFullName': 'Nome completo',
+    'page.body.wallets.beneficiaries.addAddressModal.body.fiatFullName': 'IBAN',
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatAccountNumber': 'IBAN',
-    'page.body.wallets.beneficiaries.addAddressModal.body.fiatBankName': 'Nome Banca',
+    'page.body.wallets.beneficiaries.addAddressModal.body.fiatBankName': 'Nome banca e indirizzo filiale',
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatBankSwiftCode': 'Codice Swift Banca (opzionale)',
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatIntermediaryBankName': 'Nome della Banca Intermediaria (opzionale)',
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatIntermediaryBankSwiftCode': 'Codice Swift Banca Intermediaria (optional)',

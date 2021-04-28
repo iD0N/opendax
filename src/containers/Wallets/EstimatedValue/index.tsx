@@ -102,7 +102,7 @@ class EstimatedValueContainer extends React.Component<Props> {
                     {this.translate('page.body.wallets.estimated_value')}
                     <span className="value-container">
                         <span className="value">
-                            {formatWithSeparators(estimatedValue, ',')}
+                            {formatWithSeparators(estimatedValue, '')}
                         </span>
                         <span className="value-sign">{VALUATION_PRIMARY_CURRENCY.toUpperCase()}</span>
                     </span>

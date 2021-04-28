@@ -208,7 +208,7 @@ class Landing extends React.Component<Props, State> {
     public renderPlatformInfoBlock() {
         return (
             <div className="pg-landing-screen__platform-info">
-                <div className="pg-landing-screen__platform-info__wrap">
+                <div className="pg-moblanding-screen__platform-info__wrap">
                 <h1>Partecipa alla rivoluzione digitale</h1>
                     <Link to="/signup" className="landing-button">
                                 {this.translate('page.body.landing.startTrading.box1.button')}

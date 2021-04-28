@@ -222,7 +222,7 @@ export const en = {
     'page.body.wallets.beneficiaries.addAddressModal.body.coinDestinationTag': 'Tag destinazione (opzionale)',
 
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatName': 'Descrizione',
-    'page.body.wallets.beneficiaries.addAddressModal.body.fiatFullName': 'Nome completo',
+    'page.body.wallets.beneficiaries.addAddressModal.body.fiatFullName': 'IBAN',
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatAccountNumber': 'IBAN',
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatBankName': 'Nome Banca',
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatBankSwiftCode': 'Codice Swift Banca (opzionale)',

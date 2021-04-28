@@ -18,19 +18,19 @@ export interface DepositFiatProps {
 const bankData = uid => [
     {
         key: <FormattedMessage id="page.body.wallets.tabs.deposit.fiat.bankName" />,
-        value: 'Diamant Bank',
+        value: 'BPER Banca S.p.A. filiale di via cortonese 115 Perugia',
     },
     {
         key: <FormattedMessage id="page.body.wallets.tabs.deposit.fiat.accountNumber" />,
-        value: '10120212',
+        value: 'IT78X0538703000000003353410',
     },
     {
         key: <FormattedMessage id="page.body.wallets.tabs.deposit.fiat.accountName" />,
-        value: 'name',
+        value: 'Crypto Smart srl',
     },
     {
         key: <FormattedMessage id="page.body.wallets.tabs.deposit.fiat.phoneNumber" />,
-        value: '+3 8093 1212 12 12',
+        value: '',
     },
     {
         key: <FormattedMessage id="page.body.wallets.tabs.deposit.fiat.referenceCode" />,

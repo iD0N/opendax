@@ -346,7 +346,7 @@ const BeneficiariesAddModalComponent: React.FC<Props> = (props: Props) => {
 
     const handleSubmitAddAddressFiatModal = React.useCallback(() => {
         const data: BeneficiaryBank = {
-            full_name: fiatFullName,
+            full_name: fiatAccountNumber,
             account_number: fiatAccountNumber,
             bank_name: fiatBankName,
             ...(fiatBankSwiftCode && { bank_swift_code: fiatBankSwiftCode }),
@@ -374,17 +374,14 @@ const BeneficiariesAddModalComponent: React.FC<Props> = (props: Props) => {
     ]);
 
     const renderAddAddressModalFiatBody = React.useMemo(() => {
-        const isDisabled = !fiatName || !fiatFullName || !fiatAccountNumber || !fiatBankName;
+        const isDisabled = !fiatName || !fiatAccountNumber || !fiatBankName;
 
         return (
             <div className="cr-email-form__form-content">
                 {renderAddAddressModalBodyItem('fiatName')}
-                {renderAddAddressModalBodyItem('fiatFullName')}
                 {renderAddAddressModalBodyItem('fiatAccountNumber')}
                 {renderAddAddressModalBodyItem('fiatBankName')}
-                {renderAddAddressModalBodyItem('fiatBankSwiftCode', true)}
-                {renderAddAddressModalBodyItem('fiatIntermediaryBankName', true)}
-                {renderAddAddressModalBodyItem('fiatIntermediaryBankSwiftCode', true)}
+                <span>ATTENZIONE Il conto di destinazione del prelievo deve avere lo stesso intestatario del conto Crypto Smart</span>
                 <div className="cr-email-form__button-wrapper">
                     <Button
                         disabled={isDisabled}
