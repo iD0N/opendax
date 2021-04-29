@@ -213,10 +213,21 @@
 
   &__platform-info {
     background: var(--primary-cta-color);
-    height: 250px;
+    height: 320px;
     max-width: 100vw;
+    padding-top:40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
-    
+    .landing-button {
+          background: var(--system-green);
+          color: var(--cta-layer-color);
+          height: 48px;
+          margin: 40px;
+          width: 300px;
+        }
+
           h1 {
             font-size: 45px;
             font-weight: 400;
@@ -227,39 +238,10 @@
 
     &__wrap {
       flex-direction: row;
-      justify-content: space-evenly;
-
-      &__item {
-        display: flex;
-        flex-direction: column;
-        height: 100%;
-        justify-content: center;
-
-        span {
-          color: var(--cta-layer-color);
-          font-style: normal;
-          text-align: center;
-
-          &:first-child {
-            font-size: 70px;
-            font-weight: 400;
-            letter-spacing: 0.005em;
-            line-height: 70px;
-            margin-bottom: 8px;
-          }
-
-          &:last-child {
-            font-size: 18px;
-            font-weight: 300;
-            letter-spacing: 0.005em;
-            letter-spacing: 0.25px;
-            line-height: 28px;
-            opacity: 1;
-          }
-        }
+      justify-content: center;  
       }
     }
-  }
+  
 
   &__start-trading {
     background: var(--landing-light-background-color);
@@ -351,8 +333,8 @@
     }
   }
 
-  &__mobsimple-exchange__wrap {
-    align-items: flex-start;
+  &__simple-exchange__wrap {
+    align-items: center;
     flex-direction: row;
     padding: 60px 20px;
 
@@ -363,13 +345,13 @@
         align-items: center;
         color: var(--primary-text-color);
         display: flex;
-        font-size: 20px;
-        font-weight: 800;
+        font-size: 40px;
+        font-weight: 600;
         letter-spacing: 0.005em;
-        line-height: 80px;
-        margin-bottom: 60px;
+        line-height: 1.2;
+        margin-bottom: 30px;
         max-width: 596px;
-        text-align: start;
+        text-align: center;
       }
 
       &__text-row {
@@ -405,13 +387,13 @@
     background: var(--landing-light-background-color);
 
     &__wrap {
-      margin: 100px 0;
+      margin: 20px 0;
 
       h1 {
         color: var(--primary-text-color);
-        font-size: 70px;
-        font-weight: 900;
-        margin-bottom: 60px;
+        font-size: 45px;
+        font-weight: 600;
+        margin-bottom: 30px;
       }
 
       &__cards-wrap {

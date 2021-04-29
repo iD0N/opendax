@@ -207,8 +207,8 @@ class Landing extends React.Component<Props, State> {
 
     public renderPlatformInfoBlock() {
         return (
-            <div className="pg-landing-screen__platform-info">
-                <div className="pg-moblanding-screen__platform-info__wrap">
+            <div className="pg-moblanding-screen__platform-info">
+                <div className="pg-landing-screen__platform-info__wrap">
                 <h1>Partecipa alla rivoluzione digitale</h1>
                     <Link to="/signup" className="landing-button">
                                 {this.translate('page.body.landing.startTrading.box1.button')}
@@ -222,7 +222,7 @@ class Landing extends React.Component<Props, State> {
         return (
             <div className="pg-landing-screen__simple-exchange">
                 <div className="pg-landing-screen__simple-exchange__wrap">
-                    <div className="pg-landing-screen__simple-exchange__wrap__content">
+                    <div className="pg-moblanding-screen__simple-exchange__wrap__content">
                         <h1>{this.translate('page.body.landing.simpleExchange.content.title')}</h1>
                         <div className="pg-landing-screen__simple-exchange__wrap__content__text-row">
                         <div className="pg-landing-screen__simple-exchange__wrap__content__text-row__icon"><img src={CheckIcon} alt="CheckIcon" /> </div>
@@ -255,7 +255,7 @@ class Landing extends React.Component<Props, State> {
     public renderNewsBlock() {
         return (
             <div className="pg-landing-screen__news">
-                <div className="pg-landing-screen__news__wrap">
+                <div className="pg-moblanding-screen__news__wrap">
                     <h1>{this.translate('page.body.landing.news.title')}</h1>
                     <div className="pg-landing-screen__news__wrap__cards-wrap">
                         <div className="pg-landing-screen__news__wrap__card">
