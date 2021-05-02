@@ -153,7 +153,7 @@ export const en = {
     /* Wallets */
     'page.body.wallets.estimated_value': 'Valore stimato totale',
 
-    'page.body.wallets.locked': 'Deposito sicuro',
+    'page.body.wallets.locked': 'Deposito vincolato',
     'page.body.wallets.balance': 'Totale',
     'page.body.wallets.tabs.deposit': 'Deposita',
     'page.body.wallets.tabs.deposit.disabled.message': 'I Depositi sono disabilitati',
@@ -250,16 +250,16 @@ export const en = {
     'page.body.openOrders.tab.all': 'Tutti',
     'page.body.openOrders.tab.open': 'Aperti',
     'page.body.openOrders.header.orderType': 'Tipo di ordine',
-    'page.body.openOrders.header.orderType.buy.market': 'Mercato Acquisti',
-    'page.body.openOrders.header.orderType.buy.limit': 'Limite Acquisti',
-    'page.body.openOrders.header.orderType.sell.market': 'Mercato Vendite',
-    'page.body.openOrders.header.orderType.sell.limit': 'Limite Vendite',
+    'page.body.openOrders.header.orderType.buy.market': 'Acquisto al prezzo di Mercato',
+    'page.body.openOrders.header.orderType.buy.limit': 'Acquisto al prezzo Limite',
+    'page.body.openOrders.header.orderType.sell.market': 'Vendita al prezzo di Mercato',
+    'page.body.openOrders.header.orderType.sell.limit': 'Vendita al prezzo Limite',
     'page.body.openOrders.header.pair': 'Coppia',
     'page.body.openOrders.header.amount': 'Quantità',
     'page.body.openOrders.header.price': 'Prezzo',
     'page.body.openOrders.header.executed': 'Eseguito',
     'page.body.openOrders.header.remaining': 'Rimanente',
-    'page.body.openOrders.header.costRemaining': 'Costo rimanente',
+    'page.body.openOrders.header.costRemaining': 'Valore rimanente',
     'page.body.openOrders.header.status': 'Status',
     'page.body.openOrders.content.status.done': 'Eseguito',
     'page.body.openOrders.content.status.wait': 'Aperto',
@@ -267,7 +267,7 @@ export const en = {
     'page.body.openOrders.header.button.cancelAll': 'Cancella tutto',
 
     'page.body.history.deposit': 'Depositi',
-    'page.body.history.deposit.header.txid': 'txID',
+    'page.body.history.deposit.header.txid': 'ID Transazione',
     'page.body.history.deposit.header.date': 'Data',
     'page.body.history.deposit.header.currency': 'Valuta',
     'page.body.history.deposit.header.amount': 'Quantità',
@@ -500,11 +500,11 @@ export const en = {
     'page.body.kyc.address.postcode': 'CAP',
     'page.body.kyc.address.postcode.placeholder': 'Il tuo CAP',
     'page.body.kyc.address.uploadFile.title': 'Prova di Residenza',
-    'page.body.kyc.address.uploadFile.label': 'Carica la Bolletta di un\'Utenza con il tuo Indirizzo (Foto o Scansione)',
+    'page.body.kyc.address.uploadFile.label': 'Carica il certificato di residenza o l\'estratto conto bancario o la bolletta di un\'Utenza con il tuo Indirizzo (Foto o Scansione)',
     'page.body.kyc.address.uploadFile.button': 'Carica',
     'page.body.kyc.address.uploadFile.sizes': 'Dimensione massima del file 20MB',
     'page.body.kyc.address.uploadFile.formats': 'Formati ammessi JPG, BMP, PNG',
-    'page.body.kyc.address.uploadFile.tip': 'Scatta una foto o scannerizza la bolletta di un\'utenza domestica con il tuo nome ed indirizzo. Per essere validata, la bolletta deve essere emessa a tuo Nome e da meno di 3 mesi',
+    'page.body.kyc.address.uploadFile.tip': 'Scatta una foto o scannerizza il certificato di residenza o l\'estratto conto bancario o la bolletta di un\'utenza domestica con il tuo nome ed indirizzo. Per essere validato, il documento deve essere emesso a tuo Nome e da meno di 3 mesi',
 
     'page.body.kyc.phone.head': 'Verifica Telefono',
     'page.body.kyc.phone.enterPhone': 'Inserisci Numero di Telefono',
@@ -568,8 +568,8 @@ export const en = {
     'page.header.signUp.terms': 'Ho Letto ed Accetto i Temini di Servizio',
     'page.header.signUp.modal.header': 'VERIFICA IL TUO INDIRIZZO E-MAIL',
     'page.header.signUp.modal.body': 'Per compleatare la Registrazione, Cerca una ' +
-                                      'e-mail nella tua casella con ulteriori' +
-                                      'Istruzioni. Se non trovi l\'email, ' +
+                                      'e-mail nella tua casella con ulteriori ' +
+                                      'istruzioni. Se non trovi l\'email, ' +
                                       'controlla nello spam',
     'page.header.signUp.modal.footer': 'OK',
     'page.header.signUp.strength.password': 'Robustezza Password',
