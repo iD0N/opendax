@@ -525,7 +525,7 @@ export const en = {
     'page.body.kyc.documents.select.passport': 'Passaporto',
     'page.body.kyc.documents.select.identityCard': 'Carta d\'Identità',
     'page.body.kyc.documents.select.driverLicense': 'Patente di Guida',
-    'page.body.kyc.documents.select.utilityBill': 'Bolletta di utenza domestica',
+    'page.body.kyc.documents.select.utilityBill': 'Attestazione di Residenza',
     'page.body.kyc.documents.number': ': Numero',
 
     'page.body.kyc.next': 'Continua',
