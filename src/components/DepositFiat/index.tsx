@@ -26,7 +26,7 @@ const bankData = uid => [
     },
     {
         key: <FormattedMessage id="page.body.wallets.tabs.deposit.fiat.accountName" />,
-        value: 'Crypto Smart srl',
+        value: 'Cryptosmart srl',
     },
     {
         key: <FormattedMessage id="page.body.wallets.tabs.deposit.fiat.phoneNumber" />,
