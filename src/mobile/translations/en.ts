@@ -24,10 +24,10 @@ export const en = {
     'page.mobile.orders.cancelAll': 'Cancella Tutti',
 
     'page.mobile.orders.open.title': 'Ordini Aperti',
-    'page.mobile.orders.header.orderType.buy.market': 'Compra al Mercato',
-    'page.mobile.orders.header.orderType.buy.limit': 'Compra al Limite',
-    'page.mobile.orders.header.orderType.sell.market': 'Vendi al Mercato',
-    'page.mobile.orders.header.orderType.sell.limit': 'Vendi al Limite',
+    'page.mobile.orders.header.orderType.buy.market': 'Acquisto al Mercato',
+    'page.mobile.orders.header.orderType.buy.limit': 'Acquisto al Limite',
+    'page.mobile.orders.header.orderType.sell.market': 'Vendita al Mercato',
+    'page.mobile.orders.header.orderType.sell.limit': 'Vendita al Limite',
     'page.mobile.orders.header.amount': 'Quantità',
     'page.mobile.orders.header.price': 'Prezzo',
     'page.mobile.orders.header.filled': 'Evaso',
@@ -72,7 +72,7 @@ export const en = {
     'page.mobile.profileLinks.settings.language': 'Lingua',
     'page.mobile.profileLinks.settings.theme': 'Tema',
 
-    'page.mobile.profileLinks.additional.referral': 'Link della referenza',
+    'page.mobile.profileLinks.additional.referral': 'Codice Promozionale',
     'page.mobile.profileLinks.link.referral.success': 'Copiato!',
 
     'page.mobile.profileLinks.link.verification': 'Livello {level}',
@@ -81,7 +81,7 @@ export const en = {
     'page.mobile.profileLinks.link.referral': 'Copia Link',
 
     'page.mobile.profileColorTheme.theme.dark': 'Scuro',
-    'page.mobile.profileColorTheme.theme.light': 'Leggero',
+    'page.mobile.profileColorTheme.theme.light': 'Chiaro',
 
     'page.mobile.wallets.title': 'Wallets',
 
