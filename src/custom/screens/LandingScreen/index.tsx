@@ -14,13 +14,13 @@ import {
 import { LogoWhite } from '../../assets/images/LogoWhite';
 import { MarketsTable } from '../../containers';
 
-const StartTradingFirstBoxIcon = require('../../assets/images/landing/startTrading/FirstBoxIcon.svg');
-const StartTradingSecondBoxIcon = require('../../assets/images/landing/startTrading/SecondBoxIcon.svg');
-const StartTradingThirdBoxIcon = require('../../assets/images/landing/startTrading/ThirdBoxIcon.svg');
-const StartTradingLineIcon = require('../../assets/images/landing/startTrading/LineIcon.svg');
+const StartTradingFirstBoxIcon = require('../../assets/images/landing/startTrading/icona1.svg');
+const StartTradingSecondBoxIcon = require('../../assets/images/landing/startTrading/icona2.svg');
+const StartTradingThirdBoxIcon = require('../../assets/images/landing/startTrading/icona3.svg');
+//const StartTradingLineIcon = require('../../assets/images/landing/startTrading/LineIcon.svg');
 
 const CheckIcon = require('../../assets/images/landing/checked.png');
-const SimpleExchange = require('../../assets/images/landing/cryptosmartphone2.jpg');
+const SimpleExchange = require('../../assets/images/landing/cryptosmartphone3.png');
 
 const TwitterIcon = require('../../../assets/images/landing/social/Twitter.svg');
 const YouTubeIcon = require('../../../assets/images/landing/social/YouTube.svg');
@@ -72,7 +72,7 @@ class Landing extends React.Component<Props, State> {
         const headerClass = classnames('pg-landing-screen__header', {
             'pg-landing-screen__header--scrolled': this.state.pageYOffset > 64,
         });
-
+        /*
         if (this.props.isLoggedIn) {
             return (
                 <div className={headerClass}>
@@ -81,8 +81,8 @@ class Landing extends React.Component<Props, State> {
                             <LogoWhite />
                         </div>
                         <div className="pg-landing-screen__header__wrap__center">
-                            <Link to="/about" className="pg-landing-screen__header-link">
-                                {this.translate('page.body.landing.header.center.link.about')}
+                            <Link to="http://content.cryptosmart.it/" className="pg-landing-screen__header-link">
+                                Acquista Crypto
                             </Link>
                             <Link to="/learn" className="pg-landing-screen__header-link">
                                 {this.translate('page.body.landing.header.center.link.learn')}
@@ -106,6 +106,7 @@ class Landing extends React.Component<Props, State> {
                 </div>
             );
         }
+        */
 
         return (
             <div className={headerClass}>
@@ -114,21 +115,19 @@ class Landing extends React.Component<Props, State> {
                         <LogoWhite />
                     </div>
                     <div className="pg-landing-screen__header__wrap__center">
-                        <Link to="/about" className="pg-landing-screen__header-link">
-                            {this.translate('page.body.landing.header.center.link.about')}
-                        </Link>
-                        <Link to="/learn" className="pg-landing-screen__header-link">
-                            {this.translate('page.body.landing.header.center.link.learn')}
-                        </Link>
-                        <Link to="/features" className="pg-landing-screen__header-link">
-                            {this.translate('page.body.landing.header.center.link.features')}
-                        </Link>
-                        <Link to="/support" className="pg-landing-screen__header-link">
-                            {this.translate('page.body.landing.header.center.link.support')}
-                        </Link>
-                        <Link to="/blog" className="pg-landing-screen__header-link">
-                            {this.translate('page.body.landing.header.center.link.blog')}
-                        </Link>
+                    <a href="http://content.cryptosmart.it/" className="pg-landing-screen__header-link">
+                                Acquista Crypto
+                    </a>
+                    <a href="http://content.cryptosmart.it/crypto-accademy/" className="pg-landing-screen__header-link">
+                                Accademy
+                    </a>
+                    <a href="http://content.cryptosmart.it/assistenza/" className="pg-landing-screen__header-link">
+                                Assistenza
+                    </a>
+                    <a href="http://content.cryptosmart.it/chi-siamo/" className="pg-landing-screen__header-link">
+                                Chi siamo
+                    </a>
+                        
                     </div>
                     <div className="pg-landing-screen__header__wrap__right">
                         <Link to="/signin" className="landing-button landing-button--simple">
@@ -175,25 +174,13 @@ class Landing extends React.Component<Props, State> {
                             <span>{this.translate('page.body.landing.startTrading.box1.text')}</span>
                             
                         </div>
-                        <div className="pg-landing-screen__start-trading__wrap__box">
-                            <img
-                                className="pg-landing-screen__start-trading__wrap__box-line"
-                                src={StartTradingLineIcon}
-                                alt="StartTradingLineIcon"
-                            />
-                        </div>
+                        
                         <div className="pg-landing-screen__start-trading__wrap__box">
                             <img src={StartTradingSecondBoxIcon} alt="StartTradingSecondBoxIcon" />
                             <span> <h3> {this.translate('page.body.landing.startTrading.box2.title')} </h3> </span>
                             <span>{this.translate('page.body.landing.startTrading.box2.text')}</span>
                         </div>
-                        <div className="pg-landing-screen__start-trading__wrap__box">
-                            <img
-                                className="pg-landing-screen__start-trading__wrap__box-line"
-                                src={StartTradingLineIcon}
-                                alt="StartTradingLineIcon"
-                            />
-                        </div>
+                        
                         <div className="pg-landing-screen__start-trading__wrap__box">
                             <img src={StartTradingThirdBoxIcon} alt="StartTradingThirdBoxIcon" />
                             <span> <h3> {this.translate('page.body.landing.startTrading.box3.title')} </h3> </span>
@@ -203,7 +190,7 @@ class Landing extends React.Component<Props, State> {
                 </div>
             </div>
         );
-    }
+    } 
 
     public renderPlatformInfoBlock() {
         return (
@@ -256,19 +243,22 @@ class Landing extends React.Component<Props, State> {
         return (
             <div className="pg-landing-screen__news">
                 <div className="pg-landing-screen__news__wrap">
-                    <h1>{this.translate('page.body.landing.news.title')}</h1>
+                    <h1>Crypto Accademy</h1>
                     <div className="pg-landing-screen__news__wrap__cards-wrap">
                         <div className="pg-landing-screen__news__wrap__card">
-                            <span>{this.translate('page.body.landing.news.card1.title')}</span>
-                            <span>{this.translate('page.body.landing.news.card.more')}</span>
+                            <h2>Blockchain e Criptovalute</h2>
+                            <span>Chi ha inventato Bitcoin? Una persona o un gruppo di persone identificatesi con il nome Nakamoto....</span>
+                            <span>Leggi tutto</span>
                         </div>
                         <div className="pg-landing-screen__news__wrap__card">
-                            <span>{this.translate('page.body.landing.news.card2.title')}</span>
-                            <span>{this.translate('page.body.landing.news.card.more')}</span>
+                            <h2>Definizione di Bitcoin</h2>
+                            <span>I Bitcoin sono denaro digitale che consente di effettuare transazioni peer-to-peer sicure: gli utenti possono....</span>
+                            <span>Leggi tutto</span>
                         </div>
                         <div className="pg-landing-screen__news__wrap__card">
-                            <span>{this.translate('page.body.landing.news.card3.title')}</span>
-                            <span>{this.translate('page.body.landing.news.card.more')}</span>
+                            <h2>Cos’è Ethereum?</h2>
+                            <span>Ethereum è la seconda criptovaluta per capitalizzazione di mercato ed è stata lanciata nel 2015....</span>
+                            <span>Leggi tutto</span>
                         </div>
                     </div>
                 </div>
@@ -281,13 +271,14 @@ class Landing extends React.Component<Props, State> {
             <div className="pg-landing-screen__footer">
                 <div className="pg-landing-screen__footer__wrap">
                     <div className="pg-landing-screen__footer__wrap__left" onClick={e => this.handleScrollTop()}>
-                        <LogoWhite />
+                        <LogoWhite /> <div>Cryptosmart Srl Strada Canneto S. Angelo, 5 – 06134 Perugia</div> 
                     </div>
+                    
                     <div className="pg-landing-screen__footer__wrap__navigation">
                         <div className="pg-landing-screen__footer__wrap__navigation__col">
                             <Link to="/trading/">{this.translate('page.body.landing.footer.exchange')}</Link>
                             <Link to="/wallets">{this.translate('page.body.landing.footer.wallets')}</Link>
-                            <Link to="/">{this.translate('page.body.landing.footer.fees')}</Link>
+                            <a href="http://content.cryptosmart.it/commissioni/">Commissioni</a>
                         </div>
                         <div className="pg-landing-screen__footer__wrap__navigation__col">
                             <Link to="/">{this.translate('page.body.landing.footer.faq')}</Link>

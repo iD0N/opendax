@@ -20,10 +20,10 @@ const StartTradingThirdBoxIcon = require('../../assets/images/landing/startTradi
 const StartTradingLineIcon = require('../../assets/images/landing/startTrading/LineIcon.svg');
 
 const CheckIcon = require('../../assets/images/landing/checked.png');
-const SimpleExchange = require('../../assets/images/landing/cryptosmartphone2.jpg');
+const SimpleExchange = require('../../assets/images/landing/cryptosmartphone3.png');
 
 const TwitterIcon = require('../../../assets/images/landing/social/Twitter.svg');
-const YouTubeIcon = require('../../../assets/images/landing/social/YouTube.svg');
+const YouTubeIcon = require('../../../assets/images/landing/social/YouTube.svg'); 
 const FacebookIcon = require('../../../assets/images/landing/social/Facebook.svg');
 const InstagramIcon = require('../../../assets/images/landing/social/Instagram.svg');
 

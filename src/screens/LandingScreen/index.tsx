@@ -296,6 +296,9 @@ class Landing extends React.Component<Props> {
 
     public render() {
         return (
+            
+
+
             <div className="pg-landing-screen">
                 {this.renderHeader()}
                 {this.renderMarketInfoBlock()}

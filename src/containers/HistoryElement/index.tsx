@@ -207,7 +207,8 @@ class HistoryComponent extends React.Component<Props> {
                 ];
             }
             case 'trades': {
-                const { id, created_at, side, market, price, amount, total } = item;
+                const { id, created_at, side, market, price, amount, total, maker_fee, taker_fee } = item;
+                console.log ("12345678" + maker_fee + " " +  taker_fee + JSON.stringify(item) );
                 const marketToDisplay = marketsData.find(m => m.id === market) ||
                     { name: '', price_precision: 0, amount_precision: 0 };
                 const marketName = marketToDisplay ? marketToDisplay.name : market;

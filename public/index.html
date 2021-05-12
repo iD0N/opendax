@@ -13,10 +13,25 @@
     <title>Crypto smart</title>
   </head>
   <body>
+    <div>
+      <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://support.cryptosmart.it/assets/chat/chat.min.js"></script>
+    <script>
+      $(function () {
+        new ZammadChat({
+          fontSize: '12px',
+          chatId: 1
+        });
+      });
+    </script>
+    </div>
+
+
     <script src="%PUBLIC_URL%/config/env.js"></script>
     <noscript>
         You need to enable JavaScript to run this app.
     </noscript>
-    <div id="root"></div>
+  
+  <div id="root"></div>
   </body>
 </html>
