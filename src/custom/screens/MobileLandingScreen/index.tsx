@@ -14,9 +14,9 @@ import {
 import { LogoWhite } from '../../assets/images/LogoWhite';
 import { MarketsTable } from '../../containers';
 
-const StartTradingFirstBoxIcon = require('../../assets/images/landing/startTrading/FirstBoxIcon.svg');
-const StartTradingSecondBoxIcon = require('../../assets/images/landing/startTrading/SecondBoxIcon.svg');
-const StartTradingThirdBoxIcon = require('../../assets/images/landing/startTrading/ThirdBoxIcon.svg');
+const StartTradingFirstBoxIcon = require('../../assets/images/landing/startTrading/icona1.svg');
+const StartTradingSecondBoxIcon = require('../../assets/images/landing/startTrading/icona2.svg');
+const StartTradingThirdBoxIcon = require('../../assets/images/landing/startTrading/icona3.svg');
 const StartTradingLineIcon = require('../../assets/images/landing/startTrading/LineIcon.svg');
 
 const CheckIcon = require('../../assets/images/landing/checked.png');
@@ -148,8 +148,8 @@ class Landing extends React.Component<Props, State> {
             <div className="pg-moblanding-screen__market-info">
                 <div className="pg-moblanding-screen__market-info__wrap">
                     <div className="pg-moblanding-screen__market-info__wrap__title">
-                        <h1 style={{fontSize: "40px", lineHeight: "40px" }}>{this.translate('page.body.landing.marketInfo.title.text1')}</h1>
-                        <h2 className="pg-moblanding-screen-h2">{this.translate('page.body.landing.marketInfo.title.text2')}</h2>
+                        <h1 style={{fontSize: "2.2em", lineHeight: "1.2em" }}>{this.translate('page.body.landing.marketInfo.title.text1')}</h1>
+                        <h2 style={{fontSize: "1.4em", lineHeight: "1.2em", marginTop: "15px"}} className="pg-moblanding-screen-h2">{this.translate('page.body.landing.marketInfo.title.text2')}</h2>
                         <Link to="/signup" className="landing-button">
                             {this.translate('page.body.landing.marketInfo.title.button')}
                         </Link>
@@ -256,19 +256,22 @@ class Landing extends React.Component<Props, State> {
         return (
             <div className="pg-landing-screen__news">
                 <div className="pg-moblanding-screen__news__wrap">
-                    <h1>{this.translate('page.body.landing.news.title')}</h1>
+                <h1>Crypto Accademy</h1>
                     <div className="pg-landing-screen__news__wrap__cards-wrap">
-                        <div className="pg-landing-screen__news__wrap__card">
-                            <span>{this.translate('page.body.landing.news.card1.title')}</span>
-                            <span>{this.translate('page.body.landing.news.card.more')}</span>
+                        <div className="pg-moblanding-screen__news__wrap__card">
+                            <h2>Blockchain e Criptovalute</h2>
+                            <span>Chi ha inventato Bitcoin? Una persona o un gruppo di persone identificatesi con il nome Nakamoto....</span>
+                            <a href="http://content.cryptosmart.it/blockchain-e-criptovalute/">Leggi tutto</a>
                         </div>
-                        <div className="pg-landing-screen__news__wrap__card">
-                            <span>{this.translate('page.body.landing.news.card2.title')}</span>
-                            <span>{this.translate('page.body.landing.news.card.more')}</span>
+                        <div className="pg-moblanding-screen__news__wrap__card">
+                            <h2>Definizione di Bitcoin</h2>
+                            <span>I Bitcoin sono denaro digitale che consente di effettuare transazioni peer-to-peer sicure: gli utenti possono....</span>
+                            <a href="http://content.cryptosmart.it/bitcoin/">Leggi tutto</a>
                         </div>
-                        <div className="pg-landing-screen__news__wrap__card">
-                            <span>{this.translate('page.body.landing.news.card3.title')}</span>
-                            <span>{this.translate('page.body.landing.news.card.more')}</span>
+                        <div className="pg-moblanding-screen__news__wrap__card">
+                            <h2>Cos’è Ethereum?</h2>
+                            <span>Ethereum è la seconda criptovaluta per capitalizzazione di mercato ed è stata lanciata nel 2015....</span>
+                            <a href="http://content.cryptosmart.it/ethereum/">Leggi tutto</a>
                         </div>
                     </div>
                 </div>

@@ -147,7 +147,7 @@ class Landing extends React.Component<Props, State> {
             <div className="pg-landing-screen__market-info">
                 <div className="pg-landing-screen__market-info__wrap">
                     <div className="pg-landing-screen__market-info__wrap__title">
-                        <h1>{this.translate('page.body.landing.marketInfo.title.text1')}</h1>
+                        <h1>Entra nel mondo Crypto</h1> <h1>in modo facile</h1>
                         <h2>{this.translate('page.body.landing.marketInfo.title.text2')}</h2>
                         <Link to="/signup" className="landing-button">
                             {this.translate('page.body.landing.marketInfo.title.button')}
@@ -248,17 +248,17 @@ class Landing extends React.Component<Props, State> {
                         <div className="pg-landing-screen__news__wrap__card">
                             <h2>Blockchain e Criptovalute</h2>
                             <span>Chi ha inventato Bitcoin? Una persona o un gruppo di persone identificatesi con il nome Nakamoto....</span>
-                            <span>Leggi tutto</span>
+                            <a href="http://content.cryptosmart.it/blockchain-e-criptovalute/">Leggi tutto</a>
                         </div>
                         <div className="pg-landing-screen__news__wrap__card">
                             <h2>Definizione di Bitcoin</h2>
                             <span>I Bitcoin sono denaro digitale che consente di effettuare transazioni peer-to-peer sicure: gli utenti possono....</span>
-                            <span>Leggi tutto</span>
+                            <a href="http://content.cryptosmart.it/bitcoin/">Leggi tutto</a>
                         </div>
                         <div className="pg-landing-screen__news__wrap__card">
                             <h2>Cos’è Ethereum?</h2>
                             <span>Ethereum è la seconda criptovaluta per capitalizzazione di mercato ed è stata lanciata nel 2015....</span>
-                            <span>Leggi tutto</span>
+                            <a href="http://content.cryptosmart.it/ethereum/">Leggi tutto</a>
                         </div>
                     </div>
                 </div>
@@ -271,10 +271,11 @@ class Landing extends React.Component<Props, State> {
             <div className="pg-landing-screen__footer">
                 <div className="pg-landing-screen__footer__wrap">
                     <div className="pg-landing-screen__footer__wrap__left" onClick={e => this.handleScrollTop()}>
-                        <LogoWhite /> <div>Cryptosmart Srl Strada Canneto S. Angelo, 5 – 06134 Perugia</div> 
+                        <LogoWhite />  
                     </div>
                     
                     <div className="pg-landing-screen__footer__wrap__navigation">
+                    
                         <div className="pg-landing-screen__footer__wrap__navigation__col">
                             <Link to="/trading/">{this.translate('page.body.landing.footer.exchange')}</Link>
                             <Link to="/wallets">{this.translate('page.body.landing.footer.wallets')}</Link>
@@ -291,6 +292,7 @@ class Landing extends React.Component<Props, State> {
                             <Link to="/">{this.translate('page.body.landing.footer.info')}</Link>
                         </div>
                     </div>
+                    
                     <div className="pg-landing-screen__footer__wrap__social">
                         <div className="pg-landing-screen__footer__wrap__social__row">
                             <img src={YouTubeIcon} alt="YouTube" />
@@ -298,6 +300,11 @@ class Landing extends React.Component<Props, State> {
                             <img src={InstagramIcon} alt="Instagram" />
                             <img src={TwitterIcon} alt="Twitter" />
                         </div>
+                        
+                    
+                    </div>
+                    <div className="pg-landing-screen__footer__wrap__navigation__col">
+                        Cryptosmart Srl Strada Canneto S.Angelo 5, 06134 Perugia
                     </div>
                 </div>
                 <span className="pg-landing-screen__footer__rights">{this.translate('page.body.landing.footer.rights')}</span>
