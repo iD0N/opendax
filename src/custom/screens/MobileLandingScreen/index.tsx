@@ -256,7 +256,7 @@ class Landing extends React.Component<Props, State> {
         return (
             <div className="pg-landing-screen__news">
                 <div className="pg-moblanding-screen__news__wrap">
-                <h1>Crypto Accademy</h1>
+                <h1>Crypto Academy</h1>
                     <div className="pg-landing-screen__news__wrap__cards-wrap">
                         <div className="pg-moblanding-screen__news__wrap__card">
                             <h2>Blockchain e Criptovalute</h2>

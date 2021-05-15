@@ -118,8 +118,8 @@ class Landing extends React.Component<Props, State> {
                     <a href="http://content.cryptosmart.it/" className="pg-landing-screen__header-link">
                                 Acquista Crypto
                     </a>
-                    <a href="http://content.cryptosmart.it/crypto-accademy/" className="pg-landing-screen__header-link">
-                                Accademy
+                    <a href="http://content.cryptosmart.it/crypto-academy/" className="pg-landing-screen__header-link">
+                                Academy
                     </a>
                     <a href="http://content.cryptosmart.it/assistenza/" className="pg-landing-screen__header-link">
                                 Assistenza
@@ -243,7 +243,7 @@ class Landing extends React.Component<Props, State> {
         return (
             <div className="pg-landing-screen__news">
                 <div className="pg-landing-screen__news__wrap">
-                    <h1>Crypto Accademy</h1>
+                    <h1>Crypto Academy</h1>
                     <div className="pg-landing-screen__news__wrap__cards-wrap">
                         <div className="pg-landing-screen__news__wrap__card">
                             <h2>Blockchain e Criptovalute</h2>

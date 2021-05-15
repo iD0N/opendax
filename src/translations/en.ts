@@ -6,7 +6,7 @@ export const en = {
     'page.header.navbar.trade': 'Acquista e Vendi',
     'page.header.navbar.wallets': 'Wallets',
     'page.header.navbar.openOrders': 'Ordini',
-    'page.header.navbar.history': 'Archivio',
+    'page.header.navbar.history': 'Storico',
     'page.header.navbar.api': 'Documenti API',
 
     'page.header.navbar.profile': 'Profilo',
@@ -155,9 +155,9 @@ export const en = {
 
     'page.body.wallets.locked': 'Deposito vincolato',
     'page.body.wallets.balance': 'Totale',
-    'page.body.wallets.tabs.deposit': 'Deposita',
+    'page.body.wallets.tabs.deposit': 'Ricevi',
     'page.body.wallets.tabs.deposit.disabled.message': 'I Depositi sono disabilitati',
-    'page.body.wallets.tabs.deposit.ccy.message.submit': 'Invia un deposito utilizzando il seguente indirizzo or QR code. Il deposito verrà accreditato dopo {confirmations} conferme',
+    'page.body.wallets.tabs.deposit.ccy.message.submit': 'Ricevi un deposito utilizzando il seguente indirizzo or QR code. Il deposito verrà accreditato dopo {confirmations} conferme',
     'page.body.wallets.tabs.deposit.ccy.message.address': 'Indirizzo Conto',
     'page.body.wallets.tabs.deposit.ccy.message.button': 'COPIA',
     'page.body.wallets.tabs.deposit.ccy.message.success': 'Indirizzo copiato',
@@ -170,18 +170,18 @@ export const en = {
     'page.body.wallets.tabs.deposit.fiat.bankName': 'Banca',
     'page.body.wallets.tabs.deposit.fiat.accountNumber': 'IBAN',
     'page.body.wallets.tabs.deposit.fiat.accountName': 'Intestatario del Conto',
-    'page.body.wallets.tabs.deposit.fiat.phoneNumber': 'IMPORTANTE inserisci come causale del bonifico il tuo codice utente Crypto Smart che trovi qui sotto, altrimenti il bonifico non potrà essere accettato.',
+    'page.body.wallets.tabs.deposit.fiat.phoneNumber': 'IMPORTANTE inserisci come causale del bonifico il tuo codice utente Crypto Smart che trovi qui sotto.',
     'page.body.wallets.tabs.deposit.fiat.referenceCode': 'Codice Utente',
     'page.body.wallets.table.pending': 'In Attesa di verifica',
     'page.body.wallets.table.rejected': 'Rigettato',
     'page.body.wallets.tabs.deposit.fiat.admin': ' Per effettuare un Prelievo, contattare gli amministratori!',
 
-    'page.body.wallets.tabs.withdraw': 'Preleva',
-    'page.body.wallets.tabs.withdraw.content.amount': 'Quantità Prelievo',
+    'page.body.wallets.tabs.withdraw': 'Invia',
+    'page.body.wallets.tabs.withdraw.content.amount': 'Quantità',
     'page.body.wallets.tabs.withdraw.content.code2fa': 'Codice 2FA',
     'page.body.wallets.tabs.withdraw.content.fee': 'Commissione',
     'page.body.wallets.tabs.withdraw.content.total': 'Quantità totale Prelievo',
-    'page.body.wallets.tabs.withdraw.content.button': 'PRELIEVO',
+    'page.body.wallets.tabs.withdraw.content.button': 'Invia',
     'page.body.wallets.tabs.withdraw.disabled.message': 'Prelievi disabilitati dagli amministratori',
 
     'page.body.wallets.tabs.withdraw.modal.confirmation': 'Conferma',
@@ -199,7 +199,7 @@ export const en = {
     'success.beneficiaries.resent_pin': 'Beneficiari: Pin inviato di nuovo',
     'error.beneficiaries.max10.addresses': 'Puoi registrare fino a 10 indirizzi di prelievo',
 
-    'page.body.wallets.beneficiaries.title': 'Indirizzi di Prelievo',
+    'page.body.wallets.beneficiaries.title': 'Indirizzi di destinazione',
     'page.body.wallets.beneficiaries.fiat.title': 'Dettagli per il Prelievo',
     'page.body.wallets.beneficiaries.dropdown.address': 'Indirizzo',
     'page.body.wallets.beneficiaries.dropdown.select': 'Seleziona',
@@ -213,8 +213,8 @@ export const en = {
     'page.body.wallets.beneficiaries.dropdown.fiat.name': 'Nome',
     'page.body.wallets.beneficiaries.dropdown.fiat.fullName': 'IBAN',
 
-    'page.body.wallets.beneficiaries.addAddress': 'Aggiungi coordinate bancarie',
-    'page.body.wallets.beneficiaries.addAddressModal.header': 'Aggiungi IBAN per il Prelievo',
+    'page.body.wallets.beneficiaries.addAddress': 'Aggiungi beneficiario',
+    'page.body.wallets.beneficiaries.addAddressModal.header': 'Aggiungi beneficiario',
 
     'page.body.wallets.beneficiaries.addAddressModal.body.coinAddress': 'Indirizzo Blockchain',
     'page.body.wallets.beneficiaries.addAddressModal.body.invalidAddress': 'Indirizzo non valido',
@@ -231,7 +231,7 @@ export const en = {
     'page.body.wallets.beneficiaries.addAddressModal.body.fiatIntermediaryBankSwiftCode': 'Codice Swift Banca Intermediaria (optional)',
 
 
-    'page.body.wallets.beneficiaries.addAddressModal.body.button': 'Invia per confermare',
+    'page.body.wallets.beneficiaries.addAddressModal.body.button': 'Conferma',
 
     'page.body.wallets.beneficiaries.confirmationModal.header': 'Conferma nuovo Indirizzo',
     'page.body.wallets.beneficiaries.confirmationModal.body.text': 'Abbiamo inviato una e-mail con il codice pin, inseriscilo qui sotto per salvare il nuovo indirizzo:',

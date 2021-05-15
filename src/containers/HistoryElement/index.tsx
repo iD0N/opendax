@@ -122,6 +122,7 @@ class HistoryComponent extends React.Component<Props> {
                   this.props.intl.formatMessage({id: 'page.body.history.deposit.header.date'}),
                   this.props.intl.formatMessage({id: 'page.body.history.deposit.header.currency'}),
                   this.props.intl.formatMessage({id: 'page.body.history.deposit.header.amount'}),
+                  this.props.intl.formatMessage({id: 'page.body.history.withdraw.header.fee'}),
                   this.props.intl.formatMessage({id: 'page.body.history.deposit.header.status'}),
               ];
           case 'withdraws':
@@ -141,6 +142,8 @@ class HistoryComponent extends React.Component<Props> {
                   this.props.intl.formatMessage({id: 'page.body.history.trade.header.price'}),
                   this.props.intl.formatMessage({id: 'page.body.history.trade.header.amount'}),
                   this.props.intl.formatMessage({id: 'page.body.history.trade.header.total'}),
+                  this.props.intl.formatMessage({id: 'page.body.history.withdraw.header.fee'}),
+                  "Valuta",
               ];
           default:
               return [];
@@ -164,7 +167,7 @@ class HistoryComponent extends React.Component<Props> {
         } = this.props;
         switch (type) {
             case 'deposits': {
-                const { amount, confirmations, created_at, currency, txid } = item;
+                const { amount, confirmations, created_at, currency, fee, txid } = item;
                 const blockchainLink = this.getBlockchainLink(currency, txid);
                 const wallet = wallets.find(obj => obj.currency === currency);
                 const itemCurrency = currencies && currencies.find(cur => cur.id === currency);
@@ -184,6 +187,7 @@ class HistoryComponent extends React.Component<Props> {
                     localeDate(created_at, 'fullDate'),
                     currency && currency.toUpperCase(),
                     wallet && Decimal.format(amount, wallet.fixed, ','),
+                    wallet && Decimal.format(fee, wallet.fixed, ','),
                     <span style={{ color: setDepositStatusColor(item.state) }} key={txid}>{state}</span>,
                 ];
             }
@@ -207,8 +211,8 @@ class HistoryComponent extends React.Component<Props> {
                 ];
             }
             case 'trades': {
-                const { id, created_at, side, market, price, amount, total, maker_fee, taker_fee } = item;
-                console.log ("12345678" + maker_fee + " " +  taker_fee + JSON.stringify(item) );
+                const { id, created_at, side, market, price, amount, total, fee_amount, fee_currency } = item;
+    
                 const marketToDisplay = marketsData.find(m => m.id === market) ||
                     { name: '', price_precision: 0, amount_precision: 0 };
                 const marketName = marketToDisplay ? marketToDisplay.name : market;
@@ -218,9 +222,12 @@ class HistoryComponent extends React.Component<Props> {
                     localeDate(created_at, 'fullDate'),
                     <span style={{ color: setTradesType(side).color }} key={id}>{sideText}</span>,
                     marketName,
-                    <Decimal key={id} fixed={marketToDisplay.price_precision} thousSep=",">{price}</Decimal>,
-                    <Decimal key={id} fixed={marketToDisplay.amount_precision} thousSep=",">{amount}</Decimal>,
-                    <Decimal key={id} fixed={marketToDisplay.amount_precision} thousSep=",">{total}</Decimal>,
+                    <Decimal key={id} fixed={marketToDisplay.price_precision} thousSep="">{price}</Decimal>,
+                    <Decimal key={id} fixed={marketToDisplay.amount_precision} thousSep="">{amount}</Decimal>,
+                    <Decimal key={id} fixed={marketToDisplay.price_precision} thousSep="">{total}</Decimal>,
+                    <Decimal key={id} fixed={marketToDisplay.price_precision} thousSep="">{fee_amount}</Decimal>,
+                    fee_currency,
+                    
                 ];
             }
             default: {
