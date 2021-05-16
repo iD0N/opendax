@@ -17,7 +17,7 @@ import { MarketsTable } from '../../containers';
 const StartTradingFirstBoxIcon = require('../../assets/images/landing/startTrading/icona1.svg');
 const StartTradingSecondBoxIcon = require('../../assets/images/landing/startTrading/icona2.svg');
 const StartTradingThirdBoxIcon = require('../../assets/images/landing/startTrading/icona3.svg');
-const StartTradingLineIcon = require('../../assets/images/landing/startTrading/LineIcon.svg');
+//const StartTradingLineIcon = require('../../assets/images/landing/startTrading/LineIcon.svg');
 
 const CheckIcon = require('../../assets/images/landing/checked.png');
 const SimpleExchange = require('../../assets/images/landing/cryptosmartphone3.png');
@@ -72,7 +72,7 @@ class Landing extends React.Component<Props, State> {
         const headerClass = classnames('pg-landing-screen__header', {
             'pg-landing-screen__header--scrolled': this.state.pageYOffset > 64,
         });
-
+        /*
         if (this.props.isLoggedIn) {
             return (
                 <div className={headerClass}>
@@ -106,31 +106,19 @@ class Landing extends React.Component<Props, State> {
                 </div>
             );
         }
-
+        */
         return (
             <div className={headerClass}>
-                <div className="pg-landing-screen__header__wrap">
-                    <div className="pg-landing-screen__header__wrap__left" onClick={e => this.handleScrollTop()}>
+                <div className="pg-moblanding-screen__header__wrap">
+                    <div className="pg-moblanding-screen__header__wrap__left" onClick={e => this.handleScrollTop()}>
                         <LogoWhite />
                     </div>
-                    <div className="pg-landing-screen__header__wrap__center">
+                    <div className="pg-moblanding-screen__header__wrap__center">
                         <Link to="/about" className="pg-landing-screen__header-link">
                             {this.translate('page.body.landing.header.center.link.about')}
                         </Link>
-                        <Link to="/learn" className="pg-landing-screen__header-link">
-                            {this.translate('page.body.landing.header.center.link.learn')}
-                        </Link>
-                        <Link to="/features" className="pg-landing-screen__header-link">
-                            {this.translate('page.body.landing.header.center.link.features')}
-                        </Link>
-                        <Link to="/support" className="pg-landing-screen__header-link">
-                            {this.translate('page.body.landing.header.center.link.support')}
-                        </Link>
-                        <Link to="/blog" className="pg-landing-screen__header-link">
-                            {this.translate('page.body.landing.header.center.link.blog')}
-                        </Link>
-                    </div>
-                    <div className="pg-landing-screen__header__wrap__right">
+                        </div> 
+                    <div className="pg-moblanding-screen__header__wrap__right">
                         <Link to="/signin" className="landing-button landing-button--simple">
                             {this.translate('page.body.landing.header.button2')}
                         </Link>
@@ -175,25 +163,13 @@ class Landing extends React.Component<Props, State> {
                             <span>{this.translate('page.body.landing.startTrading.box1.text')}</span>
                             
                         </div>
-                        <div className="pg-landing-screen__start-trading__wrap__box">
-                            <img
-                                className="pg-landing-screen__start-trading__wrap__box-line"
-                                src={StartTradingLineIcon}
-                                alt="StartTradingLineIcon"
-                            />
-                        </div>
+                        
                         <div className="pg-landing-screen__start-trading__wrap__box">
                             <img src={StartTradingSecondBoxIcon} alt="StartTradingSecondBoxIcon" />
                             <h3><span>{this.translate('page.body.landing.startTrading.box2.title')}</span></h3>
                             <span>{this.translate('page.body.landing.startTrading.box2.text')}</span>
                         </div>
-                        <div className="pg-landing-screen__start-trading__wrap__box">
-                            <img
-                                className="pg-landing-screen__start-trading__wrap__box-line"
-                                src={StartTradingLineIcon}
-                                alt="StartTradingLineIcon"
-                            />
-                        </div>
+                        
                         <div className="pg-landing-screen__start-trading__wrap__box">
                             <img src={StartTradingThirdBoxIcon} alt="StartTradingThirdBoxIcon" />
                             <h3><span>{this.translate('page.body.landing.startTrading.box3.title')}</span></h3>
