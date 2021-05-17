@@ -72,7 +72,7 @@ class Landing extends React.Component<Props, State> {
         const headerClass = classnames('pg-landing-screen__header', {
             'pg-landing-screen__header--scrolled': this.state.pageYOffset > 64,
         });
-        /*
+        
         if (this.props.isLoggedIn) {
             return (
                 <div className={headerClass}>
@@ -80,23 +80,22 @@ class Landing extends React.Component<Props, State> {
                         <div className="pg-landing-screen__header__wrap__left" onClick={e => this.handleScrollTop()}>
                             <LogoWhite />
                         </div>
-                        <div className="pg-landing-screen__header__wrap__center">
-                            <Link to="http://content.cryptosmart.it/" className="pg-landing-screen__header-link">
+                    
+                    <div className="pg-landing-screen__header__wrap__center">
+                    <a href="http://content.cryptosmart.it/" className="pg-landing-screen__header-link">
                                 Acquista Crypto
-                            </Link>
-                            <Link to="/learn" className="pg-landing-screen__header-link">
-                                {this.translate('page.body.landing.header.center.link.learn')}
-                            </Link>
-                            <Link to="/features" className="pg-landing-screen__header-link">
-                                {this.translate('page.body.landing.header.center.link.features')}
-                            </Link>
-                            <Link to="/support" className="pg-landing-screen__header-link">
-                                {this.translate('page.body.landing.header.center.link.support')}
-                            </Link>
-                            <Link to="/blog" className="pg-landing-screen__header-link">
-                                {this.translate('page.body.landing.header.center.link.blog')}
-                            </Link>
-                        </div>
+                    </a>
+                    <a href="http://content.cryptosmart.it/crypto-academy/" className="pg-landing-screen__header-link">
+                                Academy
+                    </a>
+                    <a href="http://content.cryptosmart.it/assistenza/" className="pg-landing-screen__header-link">
+                                Assistenza
+                    </a>
+                    <a href="http://content.cryptosmart.it/chi-siamo/" className="pg-landing-screen__header-link">
+                                Chi siamo
+                    </a>
+                        
+                    </div>
                         <div className="pg-landing-screen__header__wrap__right">
                             <Link to="/profile" className="landing-button">
                                 {this.translate('page.body.landing.header.button1')}
@@ -106,7 +105,7 @@ class Landing extends React.Component<Props, State> {
                 </div>
             );
         }
-        */
+        
 
         return (
             <div className={headerClass}>
@@ -154,7 +153,7 @@ class Landing extends React.Component<Props, State> {
                         </Link>
                     </div>
                 </div>
-            </div>
+            </div> 
         );
     }
 
