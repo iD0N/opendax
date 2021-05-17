@@ -5,7 +5,7 @@ import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { LogoIcon } from '../../../assets/images/LogoIcon';
 //import { NavBar } from '../../../containers';
-//import { ProfileIcon } from '../../../assets/images/sidebar/ProfileIcon';
+import { ProfileIcon } from '../../../assets/images/sidebar/ProfileIcon';
 import { selectUserLoggedIn } from '../../../modules';
 
 const MobileLandingHeaderComponent: React.FC = () => {
@@ -17,7 +17,11 @@ const MobileLandingHeaderComponent: React.FC = () => {
             <Link to="/" className="pg-mobile-header__logo">
                 <LogoIcon className="pg-mobile-header__logo__icon" />
             </Link>
-
+            {userLoggedIn ? (
+                    <Link to="/profile" className="pg-mobile-header__account__profile">
+                        <ProfileIcon className="pg-mobile-header__account__profile__icon" />
+                    </Link>
+                ) : (
             <Navbar className="pg-mobile-header__navbar" collapseOnSelect  expand='sm' bg='#ffffff' variant='light'>
                 <Container className="pg-mobile-header__container"> 
                     <Navbar.Toggle className="pg-mobile-header__menu" aria-controls='responsive-navbar-nav' >   
@@ -46,6 +50,7 @@ const MobileLandingHeaderComponent: React.FC = () => {
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
+                )};
 
                     
         </div>
